@@ -4,10 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Search App</title>
-    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Word Search</title>
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+    rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+    </style>
+
+    <!-- My stylesheet -->
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    
 </head>
 <body>
-    <script src="./assets/scripts/script.js"></script>
+    <!-- Header section -->
+    <header>
+        <h1>Word Search</h1>
+    </header>
+
+    <!-- Search Section -->
+    <section class="searchbox">
+        <input type="search" id="search-input" class="form-control" placeholder="search"/>
+        <button id="search-button" type="button" class="btn">
+            <i class="fas fa-search"></i>
+        </button>
+    </section>  
+
+     <!-- Display modal for error messages -->
+
+     <div id="myModal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Title:</h5>
+                    <button type="button" class="btn-close" 
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalbodyval">Sample Text</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Footer section -->
+    <footer>
+        <h4>Data Source: oxforddictionaries.com</h4>
+        <h4>Made by Team </h4>
+    </footer>
+
+    <script src="./assets/scripts/oxford API.js"></script>
 </body>
 </html>
