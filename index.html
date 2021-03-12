@@ -30,9 +30,17 @@
         style="z-index: 2000"
       >
         <ul>
-          <div class="dropdown-header">
-            <img src="./assets/images/bars.svg" alt="" />
-          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarRightAlignExample"
+            aria-controls="navbarRightAlignExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
           <li>Games</li>
           <li>Word of the day</li>
           <li>Saved Words</li>
@@ -40,12 +48,18 @@
         </ul>
       </nav>
     </header>
+
     <main>
-      <form action="">
-        <h2>Search for a word</h2>
-        <input type="text" />
-        <button></button>
-      </form>
+      <div class="col-md main-feature" id="search">
+        <form action="">
+          <h2>Search for a word</h2>
+          <input type="text" />
+          <button></button>
+        </form>
+      </div>
+      <div class="col-md" id="meaning"></div>
+      <div class="col-md" id="synonims"></div>
+      <div class="col-md" id="pronounctiation"></div>
     </main>
     <footer>
       <h4>Data Source</h4>

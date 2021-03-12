@@ -1,3 +1,16 @@
+body {
+  background-image: url(../images/papertexture_bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 85%;
+}
+
 #introCarousel,
 .carousel-inner,
 .carousel-item,
