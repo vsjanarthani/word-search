@@ -33,9 +33,9 @@
 
   <body>
     <!-- Header section -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Word search</a>
+        <a class="navbar-brand text-light" href="#">Word search</a>
 
         <button
           class="navbar-toggler"
@@ -46,7 +46,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <i class="fas fa-bars"></i>
+          <i class="fas fa-bars text-light"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -58,6 +58,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Wordgames</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Fav words</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -68,14 +71,18 @@
       <div class="input-group rounded">
         <input
           type="search"
-          class="form-control rounded"
+          class="form-control rounded full-opacity"
           placeholder="Search"
           aria-label="Search"
           aria-describedby="search-addon"
           id="search-input"
         />
 
-        <button id="search-button" type="button" class="btn btn-primary">
+        <button
+          id="search-button"
+          type="button"
+          class="btn btn-primary full-opacity"
+        >
           <i class="fas fa-search"></i>
         </button>
       </div>
@@ -133,7 +140,7 @@
       <!-- Tabs content -->
       <div class="tab-content" id="ex1-content">
         <div
-          class="tab-pane fade show active"
+          class="tab-pane fade p-3 m-3 show active"
           id="ex1-tabs-1"
           role="tabpanel"
           aria-labelledby="ex1-tab-1"
@@ -144,7 +151,7 @@
           Mousterian flint industry of the Middle Paleolithic
         </div>
         <div
-          class="tab-pane fade"
+          class="tab-pane fade p-3 m-3"
           id="ex1-tabs-2"
           role="tabpanel"
           aria-labelledby="ex1-tab-2"
@@ -166,13 +173,13 @@
           </div>
         </div>
         <div
-          class="tab-pane fade"
+          class="tab-pane fade p-3 m-3"
           id="ex1-tabs-3"
           role="tabpanel"
           aria-labelledby="ex1-tab-3"
         >
-          <button id="play-sound">
-            <img src="" alt="" />
+          <button id="play-sound" class="p-2">
+            <i class="fas fa-play-circle fa-2x"></i>
           </button>
           <div>
             <p>IPA</p>
@@ -199,6 +206,8 @@
         </div>
       </div>
     </div>
+
+    <div class="clear-footer"></div>
 
     <!-- Footer section -->
     <footer class="bg-light text-center text-lg-start fixed-bottom">
