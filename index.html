@@ -1,13 +1,264 @@
+<!-- Below is The DOCTYPE for HTML5 as an instructions to user the version of makeup language we use. For example below is html5 version-->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Search App</title>
-    <link rel="stylesheet" href="./assets/styles/style.css" />
-</head>
+
+<!-- I added the class no-js in topmost html tag to support style in case javascript is not enabled-->
+<html lang="en-us" class="no-js">
+
+  <head><!--head start-->
+    
+  <!--UTF-8 stands for Universal Coded Character Set. UTF-8 is a variable-width character encoding used for electronic interaction.-->
+	<meta charset="UTF-8" />
+
+	<!-- Incorporated below meta tag for Search engine results pages are web pages served once the user do their search query-->
+	<meta name="description" content="Digital Marketing Services | Search Engine Optimization">
+
+	<!--Added below meta tag For Responsive web development-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--Below meta tag Refresh webpage in every 120 seconds-->
+	<meta http-equiv="refresh" content="120">
+	
+<!--A canonical tag (aka "rel canonical") is a way of telling search engines that a specific URL represents the master copy of a page. 
+	Using the canonical tag prevents problems caused by identical or "duplicate" content appearing on multiple URLs.-->
+	
+	<link rel="canonical" href="#" >
+        
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dictionary App</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <!--Google Fonts added below-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+
+
+    <!--css linked here-->
+    <link rel="stylesheet" href="./styles/style.css" />
+  
+    
+
+<!-- MDBootstrap CDN-->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+  
+</head><!--head end-->
+
+  
 <body>
-    <script src="./assets/scripts/script.js"></script>
-</body>
+   <!--TML5 semantic tags define the purpose of the element. By using semantic markup, you help the browser understand the meaning of the content instead of just displaying it. By providing this extra level of clarity, HTML5 semantic elements also help search engines to read the page and find the required information faster.
+HTML5 semantic tag used for Navigation and other elements. But, always remember, only one main Navigation should have the  role="navigation" in case there are multiple navigations on site. -->
+<!--Nav start-->
+<header id="header">
+  <div id="links">
+	 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarRightAlignExample"
+        aria-controls="navbarRightAlignExample"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarRightAlignExample">
+        <!-- Left links -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <!-- Navbar dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </a>
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+         
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+<!--Div having id="links" end here-->
+  </div>
+</header>
+
+    
+       
+<!--Top Banner - we use ARTCLE for self-contained content -->
+<article>
+  <div id="top-banner"></div>
+</article> 
+<!--Article End Here-->
+       
+    
+<!--Main content of site start here-->
+<main>
+         
+    <div class="projects">
+      <h1>Our Team First Interactive Project</h1>
+      <section class="proj">
+        <img class="img-fluid" src="./img/spine-doctors.jpg" alt="spine doctors" />
+        <div class="projInfo">
+          <h2>Feature # 1: </h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatum nesciunt nam, eos quisquam modi illo, itaque odit sit fugiat doloremque perferendis consequuntur repudiandae quibusdam recusandae qui tempora! Pariatur facilis architecto animi provident molestiae similique deserunt aliquam reiciendis beatae autem quidem amet modi minus repudiandae quibusdam optio hic enim, fuga vel quod sequi dolorem omnis? Architecto quis in corporis, maiores natus unde? Qui optio officiis dolore ipsa ad ex quibusdam quis libero commodi eligendi iste est, beatae a neque consectetur! Ipsam dolorem reprehenderit laudantium magnam accusamus quod animi asperiores facilis, error fuga voluptas fugit recusandae perspiciatis, dolores aspernatur reiciendis nesciunt!
+          </p>
+          <br />
+          
+           &nbsp;
+          <a href="#">Top Banner</a>
+          
+        </div>
+      </section>
+            
+          
+      
+      <section class="proj proj2">
+        <div class="projInfo">
+          <h2>Feature # 2: </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit et suscipit, minima incidunt quo illo autem sed, veritatis eaque assumenda quaerat magni voluptatibus minus repudiandae harum omnis provident repellendus! Explicabo vero ad magni laborum earum consequatur ratione inventore ipsa, iste officiis illum libero provident maiores a est ducimus quis eius quae eum iure rerum. Qui illo quasi perferendis. At inventore vel quae ex. Possimus sint veniam aliquam illum quo quas eaque ipsa sapiente tempora corrupti officiis a quis ea optio deserunt nihil dolor, tempore accusantium cumque iste vel, excepturi, repudiandae dolore? Non tempora minima quasi voluptatem, temporibus corporis iste ipsam.
+          </p>
+          <br />
+          
+                     &nbsp;
+          <a href="#">Top Banner</a>
+        </div>
+        <img class="img-fluid" src="./img/Real-Estate.jpg" alt="" />
+      </section>
+      
+      
+      <section class="proj">
+        <img class="img-fluid" src="./img/skills.jpg" alt="" />
+        <div class="projInfo">
+          <h2>Feature # 3:</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus consequuntur nobis voluptatibus officiis tempora omnis quae cupiditate optio ullam incidunt id nemo dignissimos possimus amet, commodi magni animi expedita accusamus? Illo maiores eos vitae repellendus quaerat voluptates impedit, labore rem harum explicabo quia qui quod corrupti nemo id iure necessitatibus nihil beatae fuga. Dolorum nemo illum numquam at mollitia labore expedita eos consequatur debitis sint? Non aliquid cumque architecto. Fugiat repellat fugit reiciendis quas perspiciatis. Quam explicabo iste laborum cumque, quos sunt nostrum expedita recusandae minima iure, harum enim, veniam voluptates mollitia id? Rem voluptate architecto ad omnis, iste vero.
+          </p>
+          <br />
+          
+                     &nbsp;
+          <a href="#">Top Banner</a>
+          
+      </div>
+    </section>
+   
+  
+  </div>
+
+</main>
+  
+    <a id="contact"></a>
+    
+    
+<!--Contact Form-->
+    
+<div class="row">
+  
+<div class="col-md" id="contact"> 
+       <div class="form">
+        <h1>Get in touch with us</h1>
+        <form action="">
+          <label for="name">Your Name:</label> <input type="text" name="name" />
+          <label for="name">Your Email:</label> <input type="email" name="email" />
+          <label for="name">Your Phone:</label> <input type="email" name="email" />
+          <label for="name">Message:</label>
+          <textarea name="message" id="" cols="30" rows="10"></textarea>
+          <button type="button">Send <i class="far fa-paper-plane"></i></button>
+        </form>
+        </div>
+    
+</div>
+
+<div class="col-md" id="contact">
+  <img class="img-fluid" src="./img/web-design-and-development.jpg" alt="" />
+</div>
+        
+</div> <!--row end-->
+    
+  
+<!--footer start-->
+    
+<footer>
+   
+ <!--Google Map-->   
+<div class="row">
+  <div class="col-md-12"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.4978160925207!2d-122.27325028398478!3d37.87203917974161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80857e992cb4b69d%3A0xed3d48f0ff7b3865!2s1995%20University%20Ave%20Suite%20200%2C%20Berkeley%2C%20CA%2094704!5e0!3m2!1sen!2sus!4v1615494899997!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" aria-hidden="false" tabindex="0"></iframe></div>
+</div>
+    
+
+&nbsp; 
+
+<div class="row">
+  <div class="col-md-12"><p>Our Address: &nbsp;
+  
+    1995 University Ave Suite 200
+Berkeley, CA 94704
+<p>Contact Us : (510) 642-4111</p>
+  
+  </p></iframe></div>
+    
+</div>
+
+&nbsp;    
+    
+<div class="row">
+  <div class="col-md-12"><p>Copyright &copy; 2021 UC Berkeley Extension</p></div>
+    
+</div>
+ 
+</footer>
+    
+    
+    <!-- jQuery CDN (if necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    
+    
+  </body>
 </html>
