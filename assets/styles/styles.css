@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  background-color: #0818a8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: antiquewhite;
+}
+.search-box {
+  background-color: antiquewhite;
+  opacity: 90%;
+}
+
+.full-opacity {
+  opacity: 100%;
+}
+.clear-footer {
+  height: 90px;
+  background-color: transparent;
+}
