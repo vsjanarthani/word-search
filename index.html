@@ -1,68 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Word Search</title>
     <!-- MDB -->
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
-    rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+      rel="stylesheet"
     />
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+    ></script>
+
     <!-- Font Awesome -->
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
     />
 
     <!-- Google Fonts -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
     </style>
 
     <!-- My stylesheet -->
-    <link rel="stylesheet" href="./assets/styles/styles.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+  </head>
+
+  <body>
     <!-- Header section -->
-    <header>
-        <h1>Word Search</h1>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Word search</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Word of the day</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Wordgames</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <!-- Search Section -->
-    <section class="searchbox">
-        <input type="search" id="search-input" class="form-control" placeholder="search"/>
-        <button id="search-button" type="button" class="btn">
-            <i class="fas fa-search"></i>
+    <section class="searchbox container-fluid">
+      <div class="input-group rounded">
+        <input
+          type="search"
+          class="form-control rounded"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="search-addon"
+          id="search-input"
+        />
+
+        <button id="search-button" type="button" class="btn btn-primary">
+          <i class="fas fa-search"></i>
         </button>
-    </section>  
+      </div>
+    </section>
 
-     <!-- Display modal for error messages -->
+    <div class="p-3 text-center bg-light">
+      <h1 class="mb-3">Neanderthal</h1>
+      <h6 class="mb-3">en-us | Noun</h6>
 
-     <div id="myModal" class="modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Title:</h5>
-                    <button type="button" class="btn-close" 
-                    aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p id="modalbodyval">Sample Text</p>
-                </div>
-            </div>
+      <!-- Tabs navs -->
+      <ul
+        class="nav nav-tabs mb-3 d-flex justify-content-center"
+        id="ex1"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="ex1-tab-1"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-1"
+            role="tab"
+            aria-controls="ex1-tabs-1"
+            aria-selected="true"
+            >Definition</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="ex1-tab-2"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-2"
+            role="tab"
+            aria-controls="ex1-tabs-2"
+            aria-selected="false"
+            >Synonyms</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="ex1-tab-3"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-3"
+            role="tab"
+            aria-controls="ex1-tabs-3"
+            aria-selected="false"
+            >Pronunciation</a
+          >
+        </li>
+      </ul>
+      <!-- Tabs navs -->
+
+      <!-- Tabs content -->
+      <div class="tab-content" id="ex1-content">
+        <div
+          class="tab-pane fade show active"
+          id="ex1-tabs-1"
+          role="tabpanel"
+          aria-labelledby="ex1-tab-1"
+        >
+          An extint species of human that was widely distributed in ice-age
+          Europe between c. 120,00-35,000 years ago, with a receding forehead
+          and prominent brow ridges. The Neanderthals were associated with the
+          Mousterian flint industry of the Middle Paleolithic
         </div>
+        <div
+          class="tab-pane fade"
+          id="ex1-tabs-2"
+          role="tabpanel"
+          aria-labelledby="ex1-tab-2"
+        >
+          <p id="usage">
+            Meaning:
+            <span>
+              an uncivilized, unintelligent, or uncouth person (typically used
+              of a man)</span
+            >
+          </p>
+          <p id="short">Short Definitions: <span> extinct hominid</span></p>
+          <p id="example">
+            Example:
+            <span> the stereotype of the mechanic as a macho Neanderthal</span>
+          </p>
+          <div class="synonims">
+            <p>Synonyms: <span>1. One</span></p>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="ex1-tabs-3"
+          role="tabpanel"
+          aria-labelledby="ex1-tab-3"
+        >
+          <button id="play-sound">
+            <img src="" alt="" />
+          </button>
+          <div>
+            <p>IPA</p>
+            <p>soundsymbols</p>
+          </div>
+          <p>dialects: american english</p>
+        </div>
+      </div>
+      <!-- Tabs content -->
     </div>
 
+    <!-- Display modal for error messages -->
 
-<!-- Footer section -->
-    <footer>
-        <h4>Data Source: oxforddictionaries.com</h4>
-        <h4>Made by Team </h4>
+    <div id="myModal" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Title:</h5>
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalbodyval">Sample Text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="bg-light text-center text-lg-start fixed-bottom">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        Data Source:
+        <a class="text-dark" href="https://oxforddictionaries.com/"
+          >oxforddictionaries.com</a
+        >
+
+        <div class="text-center">Made by Team</div>
+      </div>
+      <!-- Copyright -->
     </footer>
 
     <script src="./assets/scripts/oxford API.js"></script>
-</body>
+  </body>
 </html>
