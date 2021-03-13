@@ -1,16 +1,17 @@
 // Initialise DOM elements
 var searchInputEl = document.getElementById("search-input");
+var searchButtonEl = document.getElementById("search-button");
 
 // var apiUrl = `https://od-api.oxforddictionaries.com/api/v2/${endpoint}/${language_code}/${searchWord}`;
 
 const app_id = "67feb028";
 const app_key = "dd57d4e1df89bd4ae48852837d7c462c";
-headers = {"app_id": app_id, "app_key": app_key};
+const headers = {"app_id": app_id, "app_key": app_key, };
 
 // var wordlowercase = searchWord.toLowerCase();
 
 // Function to get search word
-searchButton.addEventListener('click', () => {
+searchButtonEl.addEventListener('click', () => {
     var searchWord = searchInputEl.value.trim().toLowerCase();
     if (searchWord) {
     //   myModal.setAttribute('class', 'hide');
@@ -26,7 +27,11 @@ function fetchEntriesAPI(searchWord) {
 var endpoint = "entries";
 var language_code = "en-us";
     // fetch request
-    fetch(`https://od-api.oxforddictionaries.com/api/v2/${endpoint}/${language_code}/${searchWord}`)
+    fetch(`https://od-api.oxforddictionaries.com/api/v2/${endpoint}/${language_code}/${searchWord}`, 
+    {
+      method: "GET",
+      headers: headers,
+  })
     // fetch("./response-entries-en-us-neanderthal.json")
     .then(res => {
         if (res.status != 200) {
