@@ -50,16 +50,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+            <li class="nav-item translucid">
+              <a class="nav-link active text-light" aria-current="page" href="#"
                 >Word of the day</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Wordgames</a>
+            <li class="nav-item translucid">
+              <a class="nav-link text-light" href="#">Wordgames</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Fav words</a>
+            <li class="nav-item translucid">
+              <a class="nav-link text-light" href="#">Fav words</a>
             </li>
           </ul>
         </div>
@@ -89,7 +89,12 @@
     </section>
 
     <div class="p-3 text-center bg-light">
-      <h1 class="mb-3">Neanderthal</h1>
+      <h1 class="mb-3">
+        Neanderthal
+        <button id="add-favs" class="translucid m-2">
+          <i class="fas fa-plus fa-xs"></i>
+        </button>
+      </h1>
       <h6 class="mb-3">en-us | Noun</h6>
 
       <!-- Tabs navs -->
@@ -178,7 +183,7 @@
           role="tabpanel"
           aria-labelledby="ex1-tab-3"
         >
-          <button id="play-sound" class="p-2">
+          <button id="play-sound" class="p-2 translucid" style="color: #192ff5">
             <i class="fas fa-play-circle fa-2x"></i>
           </button>
           <div>
@@ -210,7 +215,7 @@
     <div class="clear-footer"></div>
 
     <!-- Footer section -->
-    <footer class="bg-light text-center text-lg-start fixed-bottom">
+    <footer class="text-center text-lg-start fixed-bottom golden">
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         Data Source:
