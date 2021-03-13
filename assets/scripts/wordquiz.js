@@ -3,8 +3,6 @@ const startQuizEl = document.querySelector('.start');
 const questionEl = document.getElementById('question-display');
 const optionOneEl = document.getElementById('Button1');
 const optionTwoEl = document.getElementById('Button2');
-const optionThreeEl = document.getElementById('Button3');
-const optionFourEl = document.getElementById('Button4');
 var timeValueEl = document.getElementById('timervalue');
 var divEl = document.getElementById('result');
 var h2El = document.querySelector('.show-result');
@@ -16,71 +14,47 @@ var headerEl = document.getElementById('head');
 var sectionEl = document.getElementById('start');
 var paraEl = document.getElementById('highscores');
 var displayEl = document.getElementById("form");
+var myModal = document.getElementById('myModal');
+var myModalTitle = document.querySelector('.modal-title');
+var myModalBody = document.getElementById('modalbodyval');
+var closeModalEl = document.querySelector('.btn-close');
+myModal.classList.add("hide");
+var currentIndex = 0;
+var score = 0;
+const myKey = "QRI7WpRfBB6fnzTnu8LjEcv8YXJXr+o6kukc9Zmo2SxRdfNEnMwln+RwXq0ly53vHfwxLEL9Ar9wmym3tKzkDA==";
 
-var currentIndex;
-
-// creating an array of questions, answers and options
-var questions = [
-    {
-        slNo: 1,
-        question: "Commonly used date types DO Not Include:",
-        button1: "1. strings",
-        button2: "2. booleans",
-        button3: "3. alerts",
-        button4: "4. numbers",
-        answer: "3. alerts"
-    },
-    {
-        slNo: 2,
-        question: "The condition in an if/else statement is enclosed with_______.",
-        button1: "1. quotes",
-        button2: "2. curly brackets",
-        button3: "3. parenthesis",
-        button4: "4. square brackets",
-        answer: "2. curly brackets"
-    },
-    {
-        slNo: 3,
-        question: "Arrays in JavaScript can be used to store______.",
-        button1: "1. numbers and strings",
-        button2: "2. other arrays",
-        button3: "3. booleans",
-        button4: "4. all of the above",
-        answer: "4. all of the above"
-    },
-    {
-        slNo: 4,
-        question: "String values must be enclosed within _____ when being assigned to variables.",
-        button1: "1. commas",
-        button2: "2. curly brackets",
-        button3: "3. quotes",
-        button4: "4. parenthesis",
-        answer: "3. quotes"
-    },
-    {
-        slNo: 5,
-        question: "What is the scope of a variable that is declared using ‘let’ keyword inside a function:",
-        button1: "1. global scope",
-        button2: "2. function scope",
-        button3: "3. no scope",
-        button4: "4. block scope", 
-        answer: "4. block scope" 
-    },
-    {
-        slNo: 6,
-        question: "A very useful tool used during developing and debugging for printing content to the debugger is:",
-        button1: "1. javascript",  
-        button2: "2. terminal/bash",
-        button3: "3. for loops",
-        button4: "4. console.log",  
-        answer: "4. console.log"
-    }   
-]
 
 // Start Quiz function
 startQuizEl.addEventListener('click', function() {
+    fetch("https://api.twinword.com/api/quiz/type1/latest/?level=7&area=overall", {
+        "method": "GET",
+	    "headers": {
+            "X-Twaip-Key": myKey,
+            "Content-Type": "application/json",
+            "Host": "api.twinword.com"
+	    }
+    })
+    // fetch("./assets/scripts/response-twinwordquiz.json")
+    .then(res => {
+        if (res.status != 200) {
+          throw Error(res.status + " " + res.statusText);
+        } else {
+          return res.json();
+        }
+    })
+    .then((data) => {
+        // call back function to display dictionary data
+        setQuiz(data);
+    })
+    .catch(error => {
+        myModal.setAttribute('class', 'active');
+        myModalTitle.innerText = "Oops, Something went wrong. Try again";
+        myModalBody.innerText = error;
+        closeModalEl.addEventListener('click',() => {
+          myModal.setAttribute('class', 'hide');
+        });
+    })
     displayEl.classList.add("active");
-    randomQuiz();
     startTimer();  
 });
 
@@ -99,40 +73,39 @@ timer = setInterval(() => {
 }, 1000); 
 }    
 
-// Function to set next question
-function randomQuiz() {
-    shuffledQues = questions.sort(() => Math.random() - .5);
-    currentIndex = 0;
-    nextQuiz();
-}
-
-// Function to set questions
-function nextQuiz() {
-    if (timeLeft >0 && currentIndex < shuffledQues.length) {
-        displayQuiz(shuffledQues[currentIndex]); 
+// function to set quiz
+function setQuiz(data) {
+    myQuiz = data.quizlist;
+    if (timeLeft >0 && currentIndex < myQuiz.length) {
+        displayQuiz(myQuiz[currentIndex]); 
     } else {
         displayScore();
     } 
 }
 
-// function to display next question
+// function to display questions
 function displayQuiz(ques) {
     resetDiv();
-    questionEl.innerText = ques.question;
-    optionOneEl.textContent = ques.button1;
-    optionTwoEl.textContent = ques.button2;
-    optionThreeEl.textContent = ques.button3;
-    optionFourEl.textContent = ques.button4;
-    correctAns = ques.answer;        
+    console.log(ques);
+    var myQues = ques.quiz.join(", ");
+    questionEl.innerText = myQues;
+    optionOneEl.textContent = ques.option[0];
+    optionTwoEl.textContent = ques.option[1];
+    correctAns = ques.correct;       
 }
 
 // Event listner for clicking on the options
 clickedEl.addEventListener('click', function(event) {
     if (event.target.classList == "choice") {
-        var userAns = event.target.textContent;
+        var myAns = event.target.name;
+        var userAns = parseInt(myAns);
         verifyAns(userAns);
-        currentIndex = currentIndex + 1;
-        nextQuiz();
+        currentIndex++;
+        if (timeLeft >0 && currentIndex < myQuiz.length) {
+            displayQuiz(myQuiz[currentIndex]); 
+        } else {
+            displayScore();
+        } 
     }
 });
             
@@ -142,11 +115,12 @@ function verifyAns(userAns) {
     if (userAns == correctAns) {
         divEl.classList.add("active");
         h2El.textContent = "Correct!"
+        score = score + 10;
     } else {
         divEl.classList.add("active");
         h2El.textContent = "Wrong!"
         timeLeft = timeLeft - 10;
-    }
+    }   
 }
 
 // Function to reset the div element
@@ -162,20 +136,13 @@ function resetDiv() {
 function displayScore() {
     clearInterval(timer);
     scoreEl.classList.add("active");
-    if (timeLeft <= 0) {
-        timeLeft = 0;
-        scoreValEl.innerText = timeLeft;
-        timeValueEl.textContent = timeLeft;
-    } else {
-        scoreValEl.innerText = timeLeft;
-        timeValueEl.textContent = timeLeft;
-    }
+    scoreValEl.innerText = score;
 }
 
 // Function to store timeleft in local storage
 function storeData() {
     // Get new data
-    var newScore = timeLeft;
+    var newScore = score;
     var newInitial = document.querySelector('#initial').value;
     var newData = { score: newScore,
                     initial: newInitial};

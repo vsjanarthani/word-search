@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Quiz</title>
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <title>Word Quiz</title>
+    <link rel="stylesheet" href="./assets/styles/wordquiz.css">
 
 </head>
 <body>
@@ -25,10 +25,14 @@
     <section id="start" class="main">
         <article class="container">
             <div class="box">
-                <h1>JavaScript Quiz Challenge</h1>
+                <h1>Word Quiz Challenge</h1>
             </div>
             <div class="box">
-                <p>Click the "Start Quiz" button to begin the challange. Try to answer as many questions as possible within 1 minute. Keep in mind that every <span>incorrect answer </span>will reduced your time by <span>10 seconds</span>. Good Luck!</p>
+                <p>Click the "Start Quiz" button to begin the challange. Just select which word is most closely related to the given group of words.
+                 For example, 'beer' related to {bar, alcohol, coffee} whereas 'coffee' is related to {hot, drink, cup}.
+                 <br>Word associations is very effective to vocabulary learning because it helps people to understand words quickly and memorize them effectively. 
+                 Try to answer as many questions as possible within 1 minute. Keep in mind that every <span>incorrect answer </span>will reduced your time by <span>10 seconds</span>.
+                 Good Luck!</p>
             </div>
             <div class="box">
                 <button type="button" class="start">Start Quiz</button>
@@ -40,13 +44,14 @@
     <section id="form" class="display">
         <article class="questions">
             <div class="question">
+            <h2>Select which word is most closely related to the given group of words:</h2>
             <h3 id="question-display">This is a sample question</h3>
             </div>
             <article id="answer-display" class="options">
-                <button type="button" id="Button1" class="choice">1. Option one</button>
-                <button type="button" id="Button2" class="choice">2. Option two</button>
-                <button type="button" id="Button3" class="choice">3. Option Three</button>
-                <button type="button" id="Button4" class="choice">4. Option Four</button>
+                <button type="button" name="1" id="Button1" class="choice">1. Option one</button>
+                <button type="button" name="2" id="Button2" class="choice">2. Option two</button>
+                <!-- <button type="button" id="Button3" class="choice">3. Option Three</button>
+                <button type="button" id="Button4" class="choice">4. Option Four</button> -->
             </article>
             <div id="result" class="user-answer">
                 <hr class="hr">
@@ -79,6 +84,23 @@
         </div>
     </section>
 
-    <script src="./assets/script/javascript.js"></script>
+    <!-- Display modal for error messages -->
+
+    <div id="myModal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Title:</h5>
+                    <button type="button" class="btn-close" 
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalbodyval">Sample Text</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/scripts/wordquiz.js"></script>
 </body>
 </html>

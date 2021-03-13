@@ -86,6 +86,10 @@ p {
     display: flex;
 }
 
+.box p {
+    text-align: justify;
+}
+
 span {
     font-weight: bold;
     font-style: italic;
@@ -112,7 +116,7 @@ span {
 /* Display Question section  */
 
 .display {
-    width: 90%;
+    width: 85%;
     height: 100%;
     position: absolute;
     top:80px;
@@ -121,7 +125,7 @@ span {
     align-content: center;
     flex-wrap: nowrap;
     margin: 15px;
-    padding: 10px;
+    padding: 15px;
     background-color: white;
 }
 
@@ -141,9 +145,14 @@ span {
 }
 
 .question h2 {
-    margin: 15px;
+    font-size: medium;
+}
+.question h3 {
+    margin: 10px 0;
+    font-weight: normal;
     font-size: medium;
     width: 80%;
+    text-align: left;
 }
 
 .options {
