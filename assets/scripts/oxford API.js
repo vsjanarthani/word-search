@@ -6,7 +6,7 @@ var searchButtonEl = document.getElementById("search-button");
 
 const app_id = "67feb028";
 const app_key = "dd57d4e1df89bd4ae48852837d7c462c";
-const headers = {"app_id": app_id, "app_key": app_key, };
+const headers = {"app_id": app_id, "app_key": app_key};
 
 // var wordlowercase = searchWord.toLowerCase();
 
@@ -27,12 +27,12 @@ function fetchEntriesAPI(searchWord) {
 var endpoint = "entries";
 var language_code = "en-us";
     // fetch request
-    fetch(`https://od-api.oxforddictionaries.com/api/v2/${endpoint}/${language_code}/${searchWord}`, 
-    {
-      method: "GET",
-      headers: headers,
-  })
-    // fetch("./response-entries-en-us-neanderthal.json")
+  //   fetch(`https://od-api.oxforddictionaries.com/api/v2/${endpoint}/${language_code}/${searchWord}`, 
+  //   {
+  //     method: "GET",
+  //     headers: headers,
+  // })
+    fetch("./assets/scripts/response_home.json")
     .then(res => {
         if (res.status != 200) {
           throw Error(res.status + " " + res.statusText);
@@ -57,6 +57,7 @@ var language_code = "en-us";
 // Function to display search results
 function displayData(searchResult) {
     console.log(searchResult);
+    
     // TO DO: get DOM elements and assign value
     // TO DO: create an button to mark the word as favourite
     // To DO: add an event listner to fav button
