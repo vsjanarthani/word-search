@@ -13,6 +13,16 @@
   opacity: 90%;
 }
 
+.logo {
+  margin-top: 0;
+  padding-top: 0;
+  height: 60px;
+}
+
+.my-blue {
+  background-color: #3347ff;
+}
+
 .full-opacity {
   opacity: 100%;
 }
@@ -26,6 +36,22 @@
   border: none;
 }
 
+.gold {
+  color: rgb(245, 217, 94);
+  font-weight: bolder;
+  font-size: 34px;
+  margin-left: 10px;
+  text-shadow: white;
+}
+
+.goldie {
+  color: #f5c418;
+}
+
 .golden {
   background-color: #f5c418;
+}
+
+.highlighted span {
+  font-weight: bolder;
 }
