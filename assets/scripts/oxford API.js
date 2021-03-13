@@ -1,12 +1,25 @@
 // Initialise DOM elements
 var searchInputEl = document.getElementById("search-input");
+<<<<<<< HEAD
 var searchButtonEl = document.getElementById("search-button");
+=======
+var searchButton = document.getElementById("search-button");
+var myModal = document.getElementById('myModal');
+var myModalTitle = document.querySelector('.modal-title');
+var myModalBody = document.getElementById('modalbodyval');
+var closeModalEl = document.querySelector('.btn-close');
+myModal.classList.add("hide");
+
+>>>>>>> c99140acc40c5bf97dbb215663a90853b46b54e2
 
 // var apiUrl = `https://od-api.oxforddictionaries.com/api/v2/${endpoint}/${language_code}/${searchWord}`;
 
 const app_id = "67feb028";
 const app_key = "dd57d4e1df89bd4ae48852837d7c462c";
+<<<<<<< HEAD
 const headers = {"app_id": app_id, "app_key": app_key};
+=======
+>>>>>>> c99140acc40c5bf97dbb215663a90853b46b54e2
 
 // var wordlowercase = searchWord.toLowerCase();
 
@@ -27,12 +40,10 @@ function fetchEntriesAPI(searchWord) {
 var endpoint = "entries";
 var language_code = "en-us";
     // fetch request
-  //   fetch(`https://od-api.oxforddictionaries.com/api/v2/${endpoint}/${language_code}/${searchWord}`, 
-  //   {
-  //     method: "GET",
-  //     headers: headers,
-  // })
-    fetch("./assets/scripts/response_home.json")
+    fetch(`https://od-api.oxforddictionaries.com/api/v2/${endpoint}/${language_code}/${searchWord}`,{
+      headers: {"app_id": app_id, "app_key": app_key}
+    })
+    // fetch("./response-entries-en-us-neanderthal.json")
     .then(res => {
         if (res.status != 200) {
           throw Error(res.status + " " + res.statusText);
@@ -57,7 +68,7 @@ var language_code = "en-us";
 // Function to display search results
 function displayData(searchResult) {
     console.log(searchResult);
-    
+
     // TO DO: get DOM elements and assign value
     // TO DO: create an button to mark the word as favourite
     // To DO: add an event listner to fav button

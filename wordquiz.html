@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Quiz</title>
+    <link rel="stylesheet" href="./assets/styles/wordquiz.css">
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id="head" class="header">
+        <div class="title">
+            <a href="./index.html">Go Home</a>
+        </div>
+        <div class="title">
+            <a href="#highscores" onclick="displayHighScore();">View high scores</a>
+        </div>
+        <div class="timer">
+            <h4 class="time">Time:</h4>
+            <h4 id="timervalue">0</h4>
+        </div>    
+    </header>
+
+    <!-- Start Quiz Section -->
+    <section id="start" class="main">
+        <article class="container">
+            <div class="box">
+                <h1>Word Quiz Challenge</h1>
+            </div>
+            <div class="box">
+                <p>Click the "Start Quiz" button to begin the challange. Just select which word is most closely related to the given group of words.
+                 For example, 'beer' related to {bar, alcohol, coffee} whereas 'coffee' is related to {hot, drink, cup}.
+                 <br>Word associations is very effective to vocabulary learning because it helps people to understand words quickly and memorize them effectively. 
+                 Try to answer as many questions as possible within 1 minute. Keep in mind that every <span>incorrect answer </span>will reduced your time by <span>10 seconds</span>.
+                 Good Luck!</p>
+            </div>
+            <div class="box">
+                <button type="button" class="start">Start Quiz</button>
+            </div>   
+        </article>
+    </section>
+
+    <!-- Display Question section -->
+    <section id="form" class="display">
+        <article class="questions">
+            <div class="question">
+            <h2>Select which word is most closely related to the given group of words:</h2>
+            <h3 id="question-display"></h3>
+            </div>
+            <article id="answer-display" class="options">
+                <button type="button" name="1" id="Button1" class="choice"></button>
+                <button type="button" name="2" id="Button2" class="choice"></button>
+                <!-- <button type="button" id="Button3" class="choice">3. Option Three</button>
+                <button type="button" id="Button4" class="choice">4. Option Four</button> -->
+            </article>
+            <div id="result" class="user-answer">
+                <hr class="hr">
+                <h2 class="show-result">sample</h2>
+            </div>
+        </article> 
+    </section>
+
+    <!-- Display score section -->
+    <section id="score" class="display-score">
+        <h1>All Done!</h1>
+        <div class="final-score">
+            <h3>Your Final Score is:</h3>
+            <h3 id="score-value"></h3>
+        </div>
+        <div class="initials">
+            <h3>Enter Initials:</h3>
+            <textarea required id="initial"></textarea>
+            <button class="submit" type="button" onclick="storeData();">Submit</button>
+        </div>
+    </section>
+
+    <!-- Display Highscore section -->
+    <section id="high-score" class="display-storage">
+        <h1>High Scores</h1>
+        <p id="highscores">Nothing to Display at the moment</p>
+        <div class="displaybtn">
+            <button type="button" onclick="location.reload();" class="btn"><a href="#start" id="go-back">Go Back</a></button>
+            <button type="button" id="clear" onclick="clearData();" class="btn">Clear</button>
+        </div>
+    </section>
+
+    <!-- Display modal for error messages -->
+
+    <div id="myModal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Title:</h5>
+                    <button type="button" class="btn-close" 
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalbodyval">Sample Text</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/scripts/wordquiz.js"></script>
+</body>
+</html>
