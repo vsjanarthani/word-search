@@ -8,15 +8,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: antiquewhite;
 }
-.search-box {
-  background-color: antiquewhite;
-  opacity: 90%;
+
+.subheader {
+  height: 55px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  margin-top: 0;
-  padding-top: 0;
-  height: 60px;
+.title {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  margin-top: 25px;
 }
 
 .my-blue {
