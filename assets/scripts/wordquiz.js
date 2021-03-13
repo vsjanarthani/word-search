@@ -19,22 +19,24 @@ var myModalTitle = document.querySelector('.modal-title');
 var myModalBody = document.getElementById('modalbodyval');
 var closeModalEl = document.querySelector('.btn-close');
 myModal.classList.add("hide");
+const myrapidki = "insert key";
+const myhost = "twinword-word-association-quiz.p.rapidapi.com";
 var currentIndex = 0;
 var score = 0;
-const myKey = "QRI7WpRfBB6fnzTnu8LjEcv8YXJXr+o6kukc9Zmo2SxRdfNEnMwln+RwXq0ly53vHfwxLEL9Ar9wmym3tKzkDA==";
-
 
 // Start Quiz function
 startQuizEl.addEventListener('click', function() {
-    fetch("https://api.twinword.com/api/quiz/type1/latest/?level=7&area=overall", {
-        "method": "GET",
-	    "headers": {
-            "X-Twaip-Key": myKey,
-            "Content-Type": "application/json",
-            "Host": "api.twinword.com"
-	    }
-    })
-    // fetch("./assets/scripts/response-twinwordquiz.json")
+   
+    // fetch("https://twinword-word-association-quiz.p.rapidapi.com/type1/?level=7&area=overall", {
+    // "method": "GET",
+    // "headers": {
+    //     "x-rapidapi-key": myrapidki,
+    //     "x-rapidapi-host": myhost
+    // }
+    // })
+    
+    // Fetching the sample file - works only with live server
+    fetch("./assets/scripts/response-twinwordquiz.json")
     .then(res => {
         if (res.status != 200) {
           throw Error(res.status + " " + res.statusText);
@@ -86,7 +88,6 @@ function setQuiz(data) {
 // function to display questions
 function displayQuiz(ques) {
     resetDiv();
-    console.log(ques);
     var myQues = ques.quiz.join(", ");
     questionEl.innerText = myQues;
     optionOneEl.textContent = ques.option[0];
@@ -137,6 +138,8 @@ function displayScore() {
     clearInterval(timer);
     scoreEl.classList.add("active");
     scoreValEl.innerText = score;
+    timeLeft = 0;
+    timeValueEl.innerText = timeLeft;
 }
 
 // Function to store timeleft in local storage
