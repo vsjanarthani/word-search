@@ -84,7 +84,11 @@ function displayData(searchResult) {
 
   // example section
   var exampleEl = document.getElementById("exampleDescript");
-  console.log(searchResult.items[0].definitions[0].examples[0])
   exampleEl.innerHTML = searchResult.items[0].definitions[0].examples[0];
+
+  // pronunciation
+  var pronunciationEl = document.getElementById("soundSymbols");
+  pronunciationEl.innerHTML = searchResult.pronunciations[0].entries[0].textual[0].pronunciation;
+
 
 }
