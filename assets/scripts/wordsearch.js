@@ -6,6 +6,7 @@ var myModalTitle = document.querySelector('.modal-title');
 var myModalBody = document.getElementById('modalbodyval');
 var closeModalEl = document.querySelector('.btn-close');
 myModal.classList.add("hide");
+var apiKey = "useKeyIProvideandRemoveitBeforePushing";
 
 // Function to get search word
 searchButton.addEventListener('click', () => {
@@ -26,7 +27,7 @@ function fetchEntriesAPI(searchWord) {
     "method": "POST",
     "headers": {
       "content-type": "application/json",
-      "x-rapidapi-key": "a9948976b7msh01160229121d1b6p1fd4d3jsnf2012c72efd4",
+      "x-rapidapi-key": apiKey,
       "x-rapidapi-host": "xf-english-dictionary1.p.rapidapi.com"
     }
   })
