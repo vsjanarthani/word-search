@@ -7,7 +7,7 @@ var myModalTitle = document.querySelector('.modal-title');
 var myModalBody = document.getElementById('modalbodyval');
 var closeModalEl = document.querySelector('.btn-close');
 myModal.classList.add("hide");
-var apiKey = "useKeyIProvideandRemoveitBeforePushing";
+var apiKey = "";
 
 
 
@@ -26,15 +26,15 @@ searchButtonEl.addEventListener('click', () => {
 function fetchEntriesAPI(searchWord) {
     
 // fetch request
-  fetch(`https://xf-english-dictionary1.p.rapidapi.com/v1/dictionary?selection=${searchWord}&textAfterSelection=in%20English%20requires%20determination.&synonyms=true&audioFileLinks=true&pronunciations=true&relatedWords=true&antonyms=true&textBeforeSelection=Achieving%20full`, {
-    "method": "POST",
-    "headers": {
-      "content-type": "application/json",
-      "x-rapidapi-key": apiKey,
-      "x-rapidapi-host": "xf-english-dictionary1.p.rapidapi.com"
-    }
-  })
-    // fetch("./response-entries-en-us-neanderthal.json")
+  // fetch(`https://xf-english-dictionary1.p.rapidapi.com/v1/dictionary?selection=${searchWord}&textAfterSelection=in%20English%20requires%20determination.&synonyms=true&audioFileLinks=true&pronunciations=true&relatedWords=true&antonyms=true&textBeforeSelection=Achieving%20full`, {
+  //   "method": "POST",
+  //   "headers": {
+  //     "content-type": "application/json",
+  //     "x-rapidapi-key": apiKey,
+  //     "x-rapidapi-host": "xf-english-dictionary1.p.rapidapi.com"
+  //   }
+  // })
+    fetch("./assets/scripts/response-wordsearch-api.json")
     .then(res => {
         if (res.status != 200) {
           throw Error(res.status + " " + res.statusText);
@@ -59,10 +59,18 @@ function fetchEntriesAPI(searchWord) {
 
 // Function to display search results
 function displayData(searchResult) {
-    console.log(searchResult);
+  console.log(searchResult);
+     // TO DO: get DOM elements and assign value
+  // add the searched word as title
+  var searchedTitleEl = document.getElementById("searchedWord");
+  searchedTitleEl.textContent = searchResult.target;
+  // add the type of word
+  var typeWordEl = document.getElementById("typeOfWord");
+  typeWordEl.textContent = searchResult.items[0].partOfSpeech;
 
-    // TO DO: get DOM elements and assign value
-    // TO DO: create an button to mark the word as favourite
-    // To DO: add an event listner to fav button
-    // TO DO: create a function to store the favourite word in local storage
+  // add definition
+  var definitionEL = document.getElementById("ex1-tabs-1");
+  definitionEL.textContent = searchResult.items[0].definitions[0].definition;
+  console.log(searchResult.items[0].definitions[0].definition);
+
 }
