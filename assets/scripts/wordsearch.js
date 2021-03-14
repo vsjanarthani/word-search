@@ -34,7 +34,7 @@ function fetchEntriesAPI(searchWord) {
   //     "x-rapidapi-host": "xf-english-dictionary1.p.rapidapi.com"
   //   }
   // })
-    fetch("./assets/scripts/response-wordsearch-api.json")
+    fetch("./assets/scripts/response-wordsearch-happy.json")
     .then(res => {
         if (res.status != 200) {
           throw Error(res.status + " " + res.statusText);
@@ -71,6 +71,15 @@ function displayData(searchResult) {
   // add definition
   var definitionEL = document.getElementById("ex1-tabs-1");
   definitionEL.textContent = searchResult.items[0].definitions[0].definition;
-  console.log(searchResult.items[0].definitions[0].definition);
+  console.log(searchResult.items[0].synonyms[1])
+
+  // synonyms section
+  var synonymsEl = document.getElementById("synonyms");
+  var synonymsObj = searchResult.items[0].synonyms;
+  if(synonymsObj){
+    synonymsEl.innerHTML = searchResult.items[0].synonyms[0];
+  } else {
+    synonymsEl.textContent ="Not found!";
+  }
 
 }
