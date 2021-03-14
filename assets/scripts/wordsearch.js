@@ -1,5 +1,6 @@
 // Initialise DOM elements
 var searchInputEl = document.getElementById("search-input");
+var searchButtonEl = document.getElementById("search-button");
 var searchButton = document.getElementById("search-button");
 var myModal = document.getElementById('myModal');
 var myModalTitle = document.querySelector('.modal-title');
@@ -8,8 +9,10 @@ var closeModalEl = document.querySelector('.btn-close');
 myModal.classList.add("hide");
 var apiKey = "useKeyIProvideandRemoveitBeforePushing";
 
+
+
 // Function to get search word
-searchButton.addEventListener('click', () => {
+searchButtonEl.addEventListener('click', () => {
     var searchWord = searchInputEl.value.trim().toLowerCase();
     if (searchWord) {
     //   myModal.setAttribute('class', 'hide');
@@ -57,6 +60,7 @@ function fetchEntriesAPI(searchWord) {
 // Function to display search results
 function displayData(searchResult) {
     console.log(searchResult);
+
     // TO DO: get DOM elements and assign value
     // TO DO: create an button to mark the word as favourite
     // To DO: add an event listner to fav button
