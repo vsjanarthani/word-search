@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Search</title>
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+    ></script>
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+    </style>
+
+    <!-- My stylesheet -->
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+  </head>
+
+  <body>
+    <!-- Header section -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand gold" href="./index.html" style="color: white"
+          >Word <span class="goldie">Search</span
+          ><i class="fas fa-search gold p-0 m-0"></i
+        ></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item translucid">
+              <a class="nav-link active text-light" aria-current="page" href="#"
+                >Word of the day</a
+              >
+            </li>
+            <li class="nav-item translucid">
+              <a class="nav-link text-light" href="./fav-words.html"
+                >Favorite words</a
+              >
+            </li>
+            <li class="nav-item translucid">
+              <a class="nav-link text-light" href="./word-game.html"
+                >Wordgames</a
+              >
+            </li>
+            <li class="nav-item translucid">
+              <a class="nav-link text-light" href="./translation.html"
+                >Translation</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search Section -->
+    <div class="subheader">
+      <section class="searchbox container-fluid">
+        <div class="input-group rounded">
+          <input
+            type="search"
+            class="form-control rounded full-opacity"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="search-addon"
+            id="search-input"
+          />
+
+          <button
+            id="search-button"
+            type="button"
+            class="btn btn-primary my-blue full-opacity"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Game Nav-bar -->
+
+    <nav class="navbar navbar-light" style="background-color:#3347FF;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light fs-6" href="#highscores" onclick="displayHighScore();"
+          >View high scores</a
+        >
+        <div class="timer navbar-text text-light">
+          <h4 class="time fs-6">Time: <span id="timervalue">0</span></h4>
+      </div>
+    </nav>
+
+    <!-- Gamebox -->
+
+    <div id="start" class="card text-center">
+        <div class="card-body">
+          <h3 class="card-title">Word Quiz Challenge</h3>
+          <p class="card-text">
+            Select the word that best relates to the semantic family.
+            For example, 'beer' related to {bar, alcohol, coffee} whereas 'coffee' is related to {hot, drink, cup}.
+            <br>Word associations are highly effective for vocabulary learning, as tools for understanding and memorization techiques. 
+            Try to answer as many questions as possible within 1 minute. Keep in mind that every <span class= "text-warning">incorrect answer </span>will reduced your time by <span class= "text-warning">10 seconds</span>.
+            Good Luck!
+          </p>
+
+          <button class="btn btn-primary start" type="button">Start Quiz</button>
+        </div>
+      </div>
+
+    <!-- Display question section -->
+
+    <div id="form" class="display card text-center">
+        <div class="questions card-body">
+            <div class="question">
+                <h5 class="card-title">Select which word is most closely related to the given group of words:</h5>
+                <h3 id="question-display"></h3>
+                </div>
+                <article id="answer-display" class="options">
+                    <button type="button" name="1" id="Button1" class="btn btn-primary choice">choice 1</button>
+                    <button type="button" name="2" id="Button2" class="btn btn-primary choice">choice 2</button>
+                    <!-- <button type="button" id="Button3" class="choice">3. Option Three</button>
+                    <button type="button" id="Button4" class="choice">4. Option Four</button> -->
+                </article>
+        </div>
+        <div id="result" class="user-answer card-footer text-muted show-result">sample</div>
+      </div>
+
+<!-- Display score section -->
+
+<div id="score" class="display-score card text-center">
+    <div class="card-body">
+      <h3 class="card-title">All Done!</h3>
+      <div class="final-score">
+        <h4>Your Final Score is:</h4>
+        <h4 id="score-value"></h4>
+    </div>
+    <div class="input-group initials d-flex justify-content-center align-items-center">
+        <h4 class="m-2">Enter Initials:  </h4>
+        <div class="form-outline text-center">
+          <input type="search" id="form1" class="form-control border" />
+        </div>
+        <button type="button" class="btn btn-primary" onclick="storeData();">
+            Submit
+        </button>
+      </div>
+  </div>
+
+  <!-- Display Highscore section -->
+
+  <div id="high-score" class="display-storage card text-center">
+    <div class="card-body">
+      <h2 class="card-title">High Scores</h2>
+      <p class="card-text" id="highscores">
+        Nothing to Display at the moment
+      </p>
+      <div class="displaybtn">
+        <button type="button" onclick="location.reload();" class="btn btn-primary"><a href="#start" id="go-back" class="text-light">Go Back</a></button>
+        <button type="button" id="clear" onclick="clearData();" class="btn btn-primary">Clear</button>
+    </div>
+    </div>
+  </div>
+
+<!-- Display modal for error messages -->
+
+    <div id="myModal" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Title:</h5>
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalbodyval">Sample Text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clear-footer"></div>
+
+    <!-- Footer section -->
+    <footer class="text-center text-lg-start fixed-bottom golden">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        Data Source:
+        <a class="text-dark" href="https://oxforddictionaries.com/"
+          >oxforddictionaries.com</a
+        >
+
+        <div class="text-center">Made by Team</div>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <script src="./assets/scripts/oxford API.js"></script>
+    <script src="./assets/scripts/wordquiz.js"></script>
+  </body>
+</html>
