@@ -82,4 +82,9 @@ function displayData(searchResult) {
     synonymsEl.textContent ="Not found!";
   }
 
+  // example section
+  var exampleEl = document.getElementById("exampleDescript");
+  console.log(searchResult.items[0].definitions[0].examples[0])
+  exampleEl.innerHTML = searchResult.items[0].definitions[0].examples[0];
+
 }
