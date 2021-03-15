@@ -6,6 +6,7 @@ var myModal = document.getElementById('myModal');
 var myModalTitle = document.querySelector('.modal-title');
 var myModalBody = document.getElementById('modalbodyval');
 var closeModalEl = document.querySelector('.btn-close');
+var playSoundBtnEl = document.getElementById("play-sound");
 myModal.classList.add("hide");
 var apiKey = "";
 
@@ -19,6 +20,7 @@ searchButtonEl.addEventListener('click', () => {
       fetchEntriesAPI(searchWord);
       searchInputEl.value ="";
     }
+
 });
 
 // Function to fetch entries endpoint API
@@ -63,14 +65,14 @@ function displayData(searchResult) {
      // TO DO: get DOM elements and assign value
   // add the searched word as title
   var searchedTitleEl = document.getElementById("searchedWord");
-  searchedTitleEl.textContent = searchResult.target;
+  searchedTitleEl.innerHTML = searchResult.target;
   // add the type of word
   var typeWordEl = document.getElementById("typeOfWord");
-  typeWordEl.textContent = searchResult.items[0].partOfSpeech;
+  typeWordEl.innerHTML = searchResult.items[0].partOfSpeech;
 
   // add definition
   var definitionEL = document.getElementById("ex1-tabs-1");
-  definitionEL.textContent = searchResult.items[0].definitions[0].definition;
+  definitionEL.innerHTML = searchResult.items[0].definitions[0].definition;
   console.log(searchResult.items[0].synonyms[1])
 
   // synonyms section
@@ -90,5 +92,7 @@ function displayData(searchResult) {
   var pronunciationEl = document.getElementById("soundSymbols");
   pronunciationEl.innerHTML = searchResult.pronunciations[0].entries[0].textual[0].pronunciation;
 
+  // sound button
+  console.log(searchResult.pronunciations[0].entries[0].audioFiles[0].link);
 
 }
