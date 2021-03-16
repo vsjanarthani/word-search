@@ -64,7 +64,7 @@
               >
             </li>
             <li class="nav-item translucid">
-              <a class="nav-link text-light" href="./word-game.html"
+              <a class="nav-link text-light" href="./wordquizstyled.html"
                 >Wordgames</a
               >
             </li>
@@ -104,87 +104,132 @@
 
     <!-- Game Nav-bar -->
 
-    <nav class="navbar navbar-light" style="background-color:#3347FF;">
+    <nav class="navbar navbar-light" style="background-color: #3347ff">
       <div class="container-fluid">
-        <a class="navbar-brand text-light fs-6" href="#highscores" onclick="displayHighScore();"
+        <a
+          class="navbar-brand text-light fs-6"
+          href="#highscores"
+          onclick="displayHighScore();"
           >View high scores</a
         >
         <div class="timer navbar-text text-light">
           <h4 class="time fs-6">Time: <span id="timervalue">0</span></h4>
+        </div>
       </div>
     </nav>
 
     <!-- Gamebox -->
 
-    <div id="start" class="card text-center">
-        <div class="card-body">
-          <h3 class="card-title">Word Quiz Challenge</h3>
-          <p class="card-text">
-            Select the word that best relates to the semantic family.
-            For example, 'beer' related to {bar, alcohol, coffee} whereas 'coffee' is related to {hot, drink, cup}.
-            <br>Word associations are highly effective for vocabulary learning, as tools for understanding and memorization techiques. 
-            Try to answer as many questions as possible within 1 minute. Keep in mind that every <span class= "text-warning">incorrect answer </span>will reduced your time by <span class= "text-warning">10 seconds</span>.
-            Good Luck!
-          </p>
+    <div id="start" class="main card text-center active">
+      <div class="card-body">
+        <h3 class="card-title">Word Quiz Challenge</h3>
+        <p class="card-text">
+          Select the word that best relates to the semantic family. <wbr />For
+          example, 'beer' related to {bar, alcohol, coffee} whereas 'coffee'
+          <wbr />
+          is related to {hot, drink, cup}.
+        </p>
+        <p class="card-text">
+          Word associations are highly effective for vocabulary learning, as
+          tools for understanding and memorization techiques. Try to answer as
+          many questions as possible within 1 minute. Keep in mind that every
+          <span class="text-warning">incorrect answer </span>will reduced your
+          time by <span class="text-warning">10 seconds</span>. Good Luck!
+        </p>
 
-          <button class="btn btn-primary start" type="button">Start Quiz</button>
-        </div>
+        <button class="btn btn-primary start" type="button">Start Quiz</button>
       </div>
+    </div>
 
     <!-- Display question section -->
 
     <div id="form" class="display card text-center">
-        <div class="questions card-body">
-            <div class="question">
-                <h5 class="card-title">Select which word is most closely related to the given group of words:</h5>
-                <h3 id="question-display"></h3>
-                </div>
-                <article id="answer-display" class="options">
-                    <button type="button" name="1" id="Button1" class="btn btn-primary choice">choice 1</button>
-                    <button type="button" name="2" id="Button2" class="btn btn-primary choice">choice 2</button>
-                    <!-- <button type="button" id="Button3" class="choice">3. Option Three</button>
-                    <button type="button" id="Button4" class="choice">4. Option Four</button> -->
-                </article>
+      <div class="questions card-body">
+        <div class="question">
+          <h5 class="card-title">
+            Select which word is most closely related to the given group of
+            words:
+          </h5>
+          <h3 id="question-display"></h3>
         </div>
-        <div id="result" class="user-answer card-footer text-muted show-result">sample</div>
+        <article id="answer-display" class="options">
+          <button
+            type="button"
+            name="1"
+            id="Button1"
+            class="btn btn-primary choice"
+          >
+            choice 1
+          </button>
+          <button
+            type="button"
+            name="2"
+            id="Button2"
+            class="btn btn-primary choice"
+          >
+            choice 2
+          </button>
+          <!-- <button type="button" id="Button3" class="choice">3. Option Three</button>
+            <button type="button" id="Button4" class="choice">4. Option Four</button> -->
+        </article>
       </div>
-
-<!-- Display score section -->
-
-<div id="score" class="display-score card text-center">
-    <div class="card-body">
-      <h3 class="card-title">All Done!</h3>
-      <div class="final-score">
-        <h4>Your Final Score is:</h4>
-        <h4 id="score-value"></h4>
+      <div id="result" class="user-answer card-footer text-muted show-result">
+        sample
+      </div>
     </div>
-    <div class="input-group initials d-flex justify-content-center align-items-center">
-        <h4 class="m-2">Enter Initials:  </h4>
-        <div class="form-outline text-center">
-          <input type="search" id="form1" class="form-control border" />
+
+    <!-- Display score section -->
+
+    <div id="score" class="display-score card text-center">
+      <div class="card-body">
+        <h3 class="card-title">All Done!</h3>
+        <div class="final-score">
+          <h4>Your Final Score is:</h4>
+          <h4 id="score-value"></h4>
         </div>
-        <button type="button" class="btn btn-primary" onclick="storeData();">
+        <div
+          class="input-group initials d-flex justify-content-center align-items-center"
+        >
+          <h4 class="m-2">Enter Initials:</h4>
+          <div class="form-outline text-center">
+            <input type="search" id="form1" class="form-control border" />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="storeData();">
             Submit
-        </button>
+          </button>
+        </div>
       </div>
-  </div>
-
-  <!-- Display Highscore section -->
-
-  <div id="high-score" class="display-storage card text-center">
-    <div class="card-body">
-      <h2 class="card-title">High Scores</h2>
-      <p class="card-text" id="highscores">
-        Nothing to Display at the moment
-      </p>
-      <div class="displaybtn">
-        <button type="button" onclick="location.reload();" class="btn btn-primary"><a href="#start" id="go-back" class="text-light">Go Back</a></button>
-        <button type="button" id="clear" onclick="clearData();" class="btn btn-primary">Clear</button>
     </div>
-    </div>
-  </div>
 
-<!-- Display modal for error messages -->
+    <!-- Display Highscore section -->
+
+    <div id="high-score" class="display-storage card text-center">
+      <div class="card-body">
+        <h2 class="card-title">High Scores</h2>
+        <p class="card-text" id="highscores">
+          Nothing to Display at the moment
+        </p>
+        <div class="displaybtn">
+          <button
+            type="button"
+            onclick="location.reload();"
+            class="btn btn-primary"
+          >
+            <a href="#start" id="go-back" class="text-light">Go Back</a>
+          </button>
+          <button
+            type="button"
+            id="clear"
+            onclick="clearData();"
+            class="btn btn-primary"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Display modal for error messages -->
 
     <div id="myModal" class="modal" tabindex="-1">
       <div class="modal-dialog">
@@ -200,7 +245,7 @@
       </div>
     </div>
 
-    <div class="clear-footer"></div>
+    <div class="clear-footer active"></div>
 
     <!-- Footer section -->
     <footer class="text-center text-lg-start fixed-bottom golden">
