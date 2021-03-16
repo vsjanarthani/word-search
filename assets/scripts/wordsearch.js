@@ -8,6 +8,7 @@ var referenceEl = document.getElementById("reference");
 var exampleEl = document.getElementById("example");
 var wordEl = document.getElementById("word"); 
 var phoneticsEl = document.getElementById("phonetics");
+var wodEl = document.getElementById("wod");
 var myKi = "UseyourownKeys";
 
     // TO DO: get DOM elements and assign value
@@ -15,7 +16,12 @@ var myKi = "UseyourownKeys";
     // To DO: add an event listner to fav button
     // TO DO: create a function to store the favourite word in local storage
 
-
+  wodEl.addEventListener('click', () => {
+    console.log("clicked word of the day");
+      // fetchDefinitionAPI(searchWord);
+      // fetchReferenceAPI(searchWord);
+      // fetchExampleAPI(searchWord) 
+  });
 // Function to get search word
 searchButton.addEventListener('click', () => {
   var searchWord = searchInputEl.value.trim().toLowerCase();
