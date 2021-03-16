@@ -1,0 +1,1205 @@
+{
+    "id": "home",
+    "metadata": {
+        "operation": "retrieve",
+        "provider": "Oxford University Press",
+        "schema": "RetrieveEntry"
+    },
+    "results": [
+        {
+            "id": "home",
+            "language": "en-us",
+            "lexicalEntries": [
+                {
+                    "derivatives": [
+                        {
+                            "id": "homelike",
+                            "text": "homelike"
+                        }
+                    ],
+                    "entries": [
+                        {
+                            "etymologies": [
+                                "Old English hām, of Germanic origin; related to Dutch heem and German Heim"
+                            ],
+                            "notes": [
+                                {
+                                    "text": "The traditional form for the verbal phrase meaning ‘move accurately toward a target’ is home in on, not hone in on. More than a third of citations for this expression in the Oxford English Corpus are for hone in on, however, and in the US this form has become common even in edited text. Nonetheless, hone in on is still regarded by many as incorrect, and it remains relatively rare in British use",
+                                    "type": "editorialNote"
+                                }
+                            ],
+                            "pronunciations": [
+                                {
+                                    "dialects": [
+                                        "American English"
+                                    ],
+                                    "phoneticNotation": "respell",
+                                    "phoneticSpelling": "hōm"
+                                },
+                                {
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/home_us_1.mp3",
+                                    "dialects": [
+                                        "American English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "hoʊm"
+                                }
+                            ],
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "the place where one lives permanently, especially as a member of a family or household"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "I was nineteen when I left home and went to college"
+                                        },
+                                        {
+                                            "text": "they have made Provence their home"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0474570.006",
+                                    "semanticClasses": [
+                                        {
+                                            "id": "housing",
+                                            "text": "Housing"
+                                        }
+                                    ],
+                                    "shortDefinitions": [
+                                        "place where one lives permanently"
+                                    ],
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "the family or social unit occupying a home"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "he came from a good home and was well educated"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.009",
+                                            "semanticClasses": [
+                                                {
+                                                    "id": "family",
+                                                    "text": "Family"
+                                                }
+                                            ],
+                                            "shortDefinitions": [
+                                                "family etc. occupying this place"
+                                            ]
+                                        },
+                                        {
+                                            "definitions": [
+                                                "a house or an apartment considered as a commercial property"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "low-cost homes for first-time buyers"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.010",
+                                            "semanticClasses": [
+                                                {
+                                                    "id": "housing",
+                                                    "text": "Housing"
+                                                }
+                                            ],
+                                            "shortDefinitions": [
+                                                "flat or house"
+                                            ],
+                                            "synonyms": [
+                                                {
+                                                    "language": "en",
+                                                    "text": "house"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "apartment"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "bungalow"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "cottage"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "terraced house"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "semi-detached house"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "detached house"
+                                                }
+                                            ],
+                                            "thesaurusLinks": [
+                                                {
+                                                    "entry_id": "home",
+                                                    "sense_id": "t_en_gb0007069.002"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "constructions": [
+                                                {
+                                                    "text": "home to"
+                                                }
+                                            ],
+                                            "definitions": [
+                                                "a place where something flourishes, is most typically found, or from which it originates"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "Piedmont is the home of Italy's finest red wines"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.012",
+                                            "semanticClasses": [
+                                                {
+                                                    "id": "area",
+                                                    "text": "Area"
+                                                }
+                                            ],
+                                            "shortDefinitions": [
+                                                "place where thing originates or is found"
+                                            ],
+                                            "synonyms": [
+                                                {
+                                                    "language": "en",
+                                                    "text": "domain"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "realm"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "place of origin"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "source"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "cradle"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "fount"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "fountainhead"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "natural habitat"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "natural environment"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "natural territory"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "habitat"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "home ground"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "stamping ground"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "haunt"
+                                                }
+                                            ],
+                                            "thesaurusLinks": [
+                                                {
+                                                    "entry_id": "home",
+                                                    "sense_id": "t_en_gb0007069.005"
+                                                },
+                                                {
+                                                    "entry_id": "home",
+                                                    "sense_id": "t_en_gb0007069.006"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "definitions": [
+                                                "a place where an object is kept."
+                                            ],
+                                            "id": "m_en_gbus0474570.013",
+                                            "registers": [
+                                                {
+                                                    "id": "informal",
+                                                    "text": "Informal"
+                                                }
+                                            ],
+                                            "semanticClasses": [
+                                                {
+                                                    "id": "location",
+                                                    "text": "Location"
+                                                }
+                                            ],
+                                            "shortDefinitions": [
+                                                "place where object is kept"
+                                            ],
+                                            "synonyms": [
+                                                {
+                                                    "language": "en",
+                                                    "text": "natural habitat"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "natural environment"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "natural territory"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "habitat"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "home ground"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "stamping ground"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "haunt"
+                                                }
+                                            ],
+                                            "thesaurusLinks": [
+                                                {
+                                                    "entry_id": "home",
+                                                    "sense_id": "t_en_gb0007069.006"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "synonyms": [
+                                        {
+                                            "language": "en",
+                                            "text": "place of residence"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "accommodation"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "property"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "a roof over one's head"
+                                        }
+                                    ],
+                                    "thesaurusLinks": [
+                                        {
+                                            "entry_id": "home",
+                                            "sense_id": "t_en_gb0007069.001"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "an institution for people needing professional care or supervision"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "an old people's home"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0474570.015",
+                                    "semanticClasses": [
+                                        {
+                                            "id": "residential_facility",
+                                            "text": "Residential_Facility"
+                                        }
+                                    ],
+                                    "shortDefinitions": [
+                                        "institution for people needing care"
+                                    ],
+                                    "synonyms": [
+                                        {
+                                            "language": "en",
+                                            "text": "institution"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "residential home"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "nursing home"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "old people's home"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "retirement home"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "convalescent home"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "rest home"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "children's home"
+                                        }
+                                    ],
+                                    "thesaurusLinks": [
+                                        {
+                                            "entry_id": "home",
+                                            "sense_id": "t_en_gb0007069.004"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "(in sports) the goal or end point"
+                                    ],
+                                    "domainClasses": [
+                                        {
+                                            "id": "sport",
+                                            "text": "Sport"
+                                        }
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "he was four fences from home"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0474570.017",
+                                    "semanticClasses": [
+                                        {
+                                            "id": "marked_line",
+                                            "text": "Marked_Line"
+                                        }
+                                    ],
+                                    "shortDefinitions": [
+                                        "finishing point in race"
+                                    ],
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "the place where a player is free from attack."
+                                            ],
+                                            "domainClasses": [
+                                                {
+                                                    "id": "sport",
+                                                    "text": "Sport"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.018",
+                                            "semanticClasses": [
+                                                {
+                                                    "id": "playing_position",
+                                                    "text": "Playing_Position"
+                                                }
+                                            ],
+                                            "shortDefinitions": [
+                                                "place where player is free from attack"
+                                            ]
+                                        },
+                                        {
+                                            "definitions": [
+                                                "(in lacrosse) each of the three players stationed nearest their opponents's goal."
+                                            ],
+                                            "domainClasses": [
+                                                {
+                                                    "id": "sport",
+                                                    "text": "Sport"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.019",
+                                            "semanticClasses": [
+                                                {
+                                                    "id": "team_player",
+                                                    "text": "Team_Player"
+                                                }
+                                            ],
+                                            "shortDefinitions": [
+                                                "each of players nearest opponents' goal in lacrosse"
+                                            ]
+                                        },
+                                        {
+                                            "crossReferenceMarkers": [
+                                                "short for home plate"
+                                            ],
+                                            "crossReferences": [
+                                                {
+                                                    "id": "home_plate",
+                                                    "text": "home plate",
+                                                    "type": "abbreviation of"
+                                                }
+                                            ],
+                                            "domains": [
+                                                {
+                                                    "id": "baseball",
+                                                    "text": "Baseball"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.020",
+                                            "shortDefinitions": [
+                                                "home plate"
+                                            ]
+                                        },
+                                        {
+                                            "definitions": [
+                                                "a game played or won by a team on their own field or court."
+                                            ],
+                                            "domainClasses": [
+                                                {
+                                                    "id": "sport",
+                                                    "text": "Sport"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.021",
+                                            "semanticClasses": [
+                                                {
+                                                    "id": "contest",
+                                                    "text": "Contest"
+                                                }
+                                            ],
+                                            "shortDefinitions": [
+                                                "match played by team on home ground"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "noun",
+                        "text": "Noun"
+                    },
+                    "phrases": [
+                        {
+                            "id": "a_home_away_from_home",
+                            "text": "a home away from home"
+                        },
+                        {
+                            "id": "at_home",
+                            "text": "at home"
+                        },
+                        {
+                            "id": "bring_something_home_to",
+                            "text": "bring something home to"
+                        },
+                        {
+                            "id": "close_to_home",
+                            "text": "close to home"
+                        },
+                        {
+                            "id": "come_home",
+                            "text": "come home"
+                        },
+                        {
+                            "id": "come_home_to_someone",
+                            "text": "come home to someone"
+                        },
+                        {
+                            "id": "drive_something_home",
+                            "text": "drive something home"
+                        },
+                        {
+                            "id": "hit_home",
+                            "text": "hit home"
+                        },
+                        {
+                            "id": "home_and_dry",
+                            "text": "home and dry"
+                        },
+                        {
+                            "id": "home_free",
+                            "text": "home free"
+                        },
+                        {
+                            "id": "home_is_where_the_heart_is",
+                            "text": "home is where the heart is"
+                        },
+                        {
+                            "id": "home_sweet_home",
+                            "text": "home sweet home"
+                        }
+                    ],
+                    "text": "home"
+                },
+                {
+                    "derivatives": [
+                        {
+                            "id": "homelike",
+                            "text": "homelike"
+                        }
+                    ],
+                    "entries": [
+                        {
+                            "notes": [
+                                {
+                                    "text": "attributive",
+                                    "type": "grammaticalNote"
+                                },
+                                {
+                                    "text": "The traditional form for the verbal phrase meaning ‘move accurately toward a target’ is home in on, not hone in on. More than a third of citations for this expression in the Oxford English Corpus are for hone in on, however, and in the US this form has become common even in edited text. Nonetheless, hone in on is still regarded by many as incorrect, and it remains relatively rare in British use",
+                                    "type": "editorialNote"
+                                }
+                            ],
+                            "pronunciations": [
+                                {
+                                    "dialects": [
+                                        "American English"
+                                    ],
+                                    "phoneticNotation": "respell",
+                                    "phoneticSpelling": "hōm"
+                                },
+                                {
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/home_us_1.mp3",
+                                    "dialects": [
+                                        "American English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "hoʊm"
+                                }
+                            ],
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "relating to the place where one lives"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "I don't have your home address"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0474570.024",
+                                    "shortDefinitions": [
+                                        "relating to one's home"
+                                    ],
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "made, done, or intended for use in the place where one lives"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "traditional home cooking"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.026",
+                                            "shortDefinitions": [
+                                                "made, done, etc. in one's home"
+                                            ],
+                                            "synonyms": [
+                                                {
+                                                    "language": "en",
+                                                    "text": "home-made"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "home-grown"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "locally produced"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "family"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "local"
+                                                }
+                                            ],
+                                            "thesaurusLinks": [
+                                                {
+                                                    "entry_id": "home",
+                                                    "sense_id": "t_en_gb0007069.015"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "definitions": [
+                                                "relating to one's own country and its domestic affairs"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "Japanese competitors are selling cars for lower prices in the US than in their home market"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.027",
+                                            "shortDefinitions": [
+                                                "relating to one's own country"
+                                            ],
+                                            "synonyms": [
+                                                {
+                                                    "language": "en",
+                                                    "text": "domestic"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "internal"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "local"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "national"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "interior"
+                                                },
+                                                {
+                                                    "language": "en",
+                                                    "text": "native"
+                                                }
+                                            ],
+                                            "thesaurusLinks": [
+                                                {
+                                                    "entry_id": "home",
+                                                    "sense_id": "t_en_gb0007069.014"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "(of a sports game) played at the team's own field or court"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "their first home game of the season"
+                                        },
+                                        {
+                                            "text": "a home win"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0474570.029",
+                                    "shortDefinitions": [
+                                        "played at team's own ground"
+                                    ],
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "relating to or denoting a sports team that is playing at its own field or court"
+                                            ],
+                                            "domainClasses": [
+                                                {
+                                                    "id": "sport",
+                                                    "text": "Sport"
+                                                }
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "the home team"
+                                                },
+                                                {
+                                                    "text": "home fans"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.030",
+                                            "shortDefinitions": [
+                                                "denoting sports team playing at own ground"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "denoting the administrative center of an organization"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "the company has moved its home office"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0474570.032",
+                                    "regions": [
+                                        {
+                                            "id": "north_american",
+                                            "text": "North_American"
+                                        }
+                                    ],
+                                    "shortDefinitions": [
+                                        "denoting organization's administrative centre"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "adjective",
+                        "text": "Adjective"
+                    },
+                    "phrases": [
+                        {
+                            "id": "a_home_away_from_home",
+                            "text": "a home away from home"
+                        },
+                        {
+                            "id": "at_home",
+                            "text": "at home"
+                        },
+                        {
+                            "id": "bring_something_home_to",
+                            "text": "bring something home to"
+                        },
+                        {
+                            "id": "close_to_home",
+                            "text": "close to home"
+                        },
+                        {
+                            "id": "come_home",
+                            "text": "come home"
+                        },
+                        {
+                            "id": "come_home_to_someone",
+                            "text": "come home to someone"
+                        },
+                        {
+                            "id": "drive_something_home",
+                            "text": "drive something home"
+                        },
+                        {
+                            "id": "hit_home",
+                            "text": "hit home"
+                        },
+                        {
+                            "id": "home_and_dry",
+                            "text": "home and dry"
+                        },
+                        {
+                            "id": "home_free",
+                            "text": "home free"
+                        },
+                        {
+                            "id": "home_is_where_the_heart_is",
+                            "text": "home is where the heart is"
+                        },
+                        {
+                            "id": "home_sweet_home",
+                            "text": "home sweet home"
+                        }
+                    ],
+                    "text": "home"
+                },
+                {
+                    "derivatives": [
+                        {
+                            "id": "homelike",
+                            "text": "homelike"
+                        }
+                    ],
+                    "entries": [
+                        {
+                            "notes": [
+                                {
+                                    "text": "The traditional form for the verbal phrase meaning ‘move accurately toward a target’ is home in on, not hone in on. More than a third of citations for this expression in the Oxford English Corpus are for hone in on, however, and in the US this form has become common even in edited text. Nonetheless, hone in on is still regarded by many as incorrect, and it remains relatively rare in British use",
+                                    "type": "editorialNote"
+                                }
+                            ],
+                            "pronunciations": [
+                                {
+                                    "dialects": [
+                                        "American English"
+                                    ],
+                                    "phoneticNotation": "respell",
+                                    "phoneticSpelling": "hōm"
+                                },
+                                {
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/home_us_1.mp3",
+                                    "dialects": [
+                                        "American English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "hoʊm"
+                                }
+                            ],
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "to or at the place where one lives"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "what time did he get home last night?"
+                                        },
+                                        {
+                                            "text": "I stayed home with the kids"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0474570.034",
+                                    "shortDefinitions": [
+                                        "to one's home"
+                                    ],
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "to the end or conclusion of a race or something difficult"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "the favorite romped home six lengths clear"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.037",
+                                            "shortDefinitions": [
+                                                "to end or conclusion of race etc."
+                                            ]
+                                        },
+                                        {
+                                            "definitions": [
+                                                "to or toward home plate."
+                                            ],
+                                            "domainClasses": [
+                                                {
+                                                    "id": "baseball",
+                                                    "text": "Baseball"
+                                                }
+                                            ],
+                                            "domains": [
+                                                {
+                                                    "id": "baseball",
+                                                    "text": "Baseball"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.038",
+                                            "shortDefinitions": [
+                                                "to or toward home plate"
+                                            ]
+                                        },
+                                        {
+                                            "definitions": [
+                                                "to the intended or correct position"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "he drove the bolt home noisily"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.039",
+                                            "shortDefinitions": [
+                                                "to intended or correct position"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "adverb",
+                        "text": "Adverb"
+                    },
+                    "phrases": [
+                        {
+                            "id": "a_home_away_from_home",
+                            "text": "a home away from home"
+                        },
+                        {
+                            "id": "at_home",
+                            "text": "at home"
+                        },
+                        {
+                            "id": "bring_something_home_to",
+                            "text": "bring something home to"
+                        },
+                        {
+                            "id": "close_to_home",
+                            "text": "close to home"
+                        },
+                        {
+                            "id": "come_home",
+                            "text": "come home"
+                        },
+                        {
+                            "id": "come_home_to_someone",
+                            "text": "come home to someone"
+                        },
+                        {
+                            "id": "drive_something_home",
+                            "text": "drive something home"
+                        },
+                        {
+                            "id": "hit_home",
+                            "text": "hit home"
+                        },
+                        {
+                            "id": "home_and_dry",
+                            "text": "home and dry"
+                        },
+                        {
+                            "id": "home_free",
+                            "text": "home free"
+                        },
+                        {
+                            "id": "home_is_where_the_heart_is",
+                            "text": "home is where the heart is"
+                        },
+                        {
+                            "id": "home_sweet_home",
+                            "text": "home sweet home"
+                        }
+                    ],
+                    "text": "home"
+                },
+                {
+                    "derivatives": [
+                        {
+                            "id": "homelike",
+                            "text": "homelike"
+                        }
+                    ],
+                    "entries": [
+                        {
+                            "grammaticalFeatures": [
+                                {
+                                    "id": "intransitive",
+                                    "text": "Intransitive",
+                                    "type": "Subcategorization"
+                                }
+                            ],
+                            "notes": [
+                                {
+                                    "text": "The traditional form for the verbal phrase meaning ‘move accurately toward a target’ is home in on, not hone in on. More than a third of citations for this expression in the Oxford English Corpus are for hone in on, however, and in the US this form has become common even in edited text. Nonetheless, hone in on is still regarded by many as incorrect, and it remains relatively rare in British use",
+                                    "type": "editorialNote"
+                                }
+                            ],
+                            "pronunciations": [
+                                {
+                                    "dialects": [
+                                        "American English"
+                                    ],
+                                    "phoneticNotation": "respell",
+                                    "phoneticSpelling": "hōm"
+                                },
+                                {
+                                    "audioFile": "https://audio.oxforddictionaries.com/en/mp3/home_us_1.mp3",
+                                    "dialects": [
+                                        "American English"
+                                    ],
+                                    "phoneticNotation": "IPA",
+                                    "phoneticSpelling": "hoʊm"
+                                }
+                            ],
+                            "senses": [
+                                {
+                                    "definitions": [
+                                        "(of an animal) return by instinct to its territory after leaving it"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "a dozen geese homing to their summer nesting grounds"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0474570.042",
+                                    "shortDefinitions": [
+                                        "(of animal) return by instinct to its territory"
+                                    ],
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "(of a pigeon bred for long-distance racing) fly back to or arrive at its loft after being released at a distant point"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "pigeons who do not home will win no prizes"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.048",
+                                            "shortDefinitions": [
+                                                "(of pigeon) return after being released at distance"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "definitions": [
+                                        "move or be aimed toward (a target or destination) with great accuracy"
+                                    ],
+                                    "examples": [
+                                        {
+                                            "text": "more than 100 missiles were launched, homing in on radar emissions"
+                                        }
+                                    ],
+                                    "id": "m_en_gbus0474570.050",
+                                    "notes": [
+                                        {
+                                            "text": "\"home in on\"",
+                                            "type": "wordFormNote"
+                                        }
+                                    ],
+                                    "shortDefinitions": [
+                                        "move accurately towards target"
+                                    ],
+                                    "subsenses": [
+                                        {
+                                            "definitions": [
+                                                "focus attention on"
+                                            ],
+                                            "examples": [
+                                                {
+                                                    "text": "a teaching style that homes in on what is of central importance for each student"
+                                                }
+                                            ],
+                                            "id": "m_en_gbus0474570.051",
+                                            "shortDefinitions": [
+                                                "focus attention on"
+                                            ]
+                                        }
+                                    ],
+                                    "synonyms": [
+                                        {
+                                            "language": "en",
+                                            "text": "focus on"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "focus attention on"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "concentrate on"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "zero in on"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "centre on"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "fix on"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "aim at"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "highlight"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "spotlight"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "underline"
+                                        },
+                                        {
+                                            "language": "en",
+                                            "text": "pinpoint"
+                                        }
+                                    ],
+                                    "thesaurusLinks": [
+                                        {
+                                            "entry_id": "home_in_on",
+                                            "sense_id": "t_en_gb0007069.016"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "language": "en-us",
+                    "lexicalCategory": {
+                        "id": "verb",
+                        "text": "Verb"
+                    },
+                    "phrases": [
+                        {
+                            "id": "a_home_away_from_home",
+                            "text": "a home away from home"
+                        },
+                        {
+                            "id": "at_home",
+                            "text": "at home"
+                        },
+                        {
+                            "id": "bring_something_home_to",
+                            "text": "bring something home to"
+                        },
+                        {
+                            "id": "close_to_home",
+                            "text": "close to home"
+                        },
+                        {
+                            "id": "come_home",
+                            "text": "come home"
+                        },
+                        {
+                            "id": "come_home_to_someone",
+                            "text": "come home to someone"
+                        },
+                        {
+                            "id": "drive_something_home",
+                            "text": "drive something home"
+                        },
+                        {
+                            "id": "hit_home",
+                            "text": "hit home"
+                        },
+                        {
+                            "id": "home_and_dry",
+                            "text": "home and dry"
+                        },
+                        {
+                            "id": "home_free",
+                            "text": "home free"
+                        },
+                        {
+                            "id": "home_is_where_the_heart_is",
+                            "text": "home is where the heart is"
+                        },
+                        {
+                            "id": "home_sweet_home",
+                            "text": "home sweet home"
+                        }
+                    ],
+                    "text": "home"
+                }
+            ],
+            "type": "headword",
+            "word": "home"
+        }
+    ],
+    "word": "home"
+}

@@ -97,7 +97,7 @@ function displayQuiz(ques) {
 
 // Event listner for clicking on the options
 clickedEl.addEventListener("click", function (event) {
-  if (event.target.classList == "choice") {
+  if (event.target.classList == "btn btn-primary choice ripple-surface") {
     var myAns = event.target.name;
     var userAns = parseInt(myAns);
     verifyAns(userAns);
@@ -105,6 +105,7 @@ clickedEl.addEventListener("click", function (event) {
     if (timeLeft > 0 && currentIndex < myQuiz.length) {
       displayQuiz(myQuiz[currentIndex]);
     } else {
+      displayEl.classList.remove("active");
       displayScore();
     }
   }
@@ -148,7 +149,7 @@ function displayScore() {
 function storeData() {
   // Get new data
   var newScore = score;
-  var newInitial = document.querySelector("#initial").value;
+  var newInitial = document.getElementById("form1").value;
   var newData = { score: newScore, initial: newInitial };
 
   if (localStorage.getItem("highScores") == null) {
@@ -169,6 +170,7 @@ function storeData() {
 
 // Function to display High score
 function displayHighScore() {
+  scoreEl.classList.remove("active");
   highscoreEl.classList.add("active");
   headerEl.classList.add("hide");
   sectionEl.classList.add("hide");
