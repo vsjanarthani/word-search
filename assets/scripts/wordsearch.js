@@ -262,5 +262,14 @@ var listCities = function () {
   }
 };
 
+// function to show information for the saved word
+var searchHandler = function (event) {
+  event.preventDefault();
+  var wordSearched = event.target.textContent.trim();
+  fetchDefinitionAPI(wordSearched);
+  fetchReferenceAPI(wordSearched);
+  fetchExampleAPI(wordSearched);
+};
+
 
 
