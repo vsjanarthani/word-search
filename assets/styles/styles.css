@@ -122,6 +122,17 @@
    
 }
 
+.tab-pane {
+  width: 60%;
+  margin: 20px auto 20px auto;
+  justify-self: center;
+  justify-content: center;
+}
+
+.main-text-reference {
+  justify-self: center;
+}
+
 }
 
 
@@ -153,7 +164,16 @@
   .subheader {
     margin: 65px auto 65px auto;
     width: 30%;
-    justify-self: center;
-    
+    justify-self: center; 
+ }
+
+ .tab-pane {
+  width: 40%;
+  margin: 35px auto 35px auto;
+  justify-self: center;
+  justify-content: center;
+}
+ .main-text-reference {
+   justify-self: center;
  }
 }
