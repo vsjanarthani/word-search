@@ -180,7 +180,7 @@ var getRandomWord = function() {
 .then(response => {
   if (response.ok) {
     response.json().then(function(data) {
-        return data;
+        return data.word;
     });
 } else {
     alert("Error: " + response.status);
