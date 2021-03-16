@@ -104,7 +104,11 @@
 
     <!-- Game Nav-bar -->
 
-    <nav class="navbar navbar-light" style="background-color: #3347ff">
+    <nav
+      id="head"
+      class="navbar navbar-light"
+      style="background-color: #3347ff"
+    >
       <div class="container-fluid">
         <a
           class="navbar-brand text-light fs-6"
@@ -150,7 +154,7 @@
             Select which word is most closely related to the given group of
             words:
           </h5>
-          <h3 id="question-display"></h3>
+          <h4 id="question-display"></h4>
         </div>
         <article id="answer-display" class="options">
           <button
@@ -158,17 +162,13 @@
             name="1"
             id="Button1"
             class="btn btn-primary choice"
-          >
-            choice 1
-          </button>
+          ></button>
           <button
             type="button"
             name="2"
             id="Button2"
             class="btn btn-primary choice"
-          >
-            choice 2
-          </button>
+          ></button>
           <!-- <button type="button" id="Button3" class="choice">3. Option Three</button>
             <button type="button" id="Button4" class="choice">4. Option Four</button> -->
         </article>
@@ -194,7 +194,11 @@
           <div class="form-outline text-center">
             <input type="search" id="form1" class="form-control border" />
           </div>
-          <button type="button" class="btn btn-primary" onclick="storeData();">
+          <button
+            type="button"
+            class="btn btn-primary submit"
+            onclick="storeData();"
+          >
             Submit
           </button>
         </div>
