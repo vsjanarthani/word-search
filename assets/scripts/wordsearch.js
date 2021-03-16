@@ -11,6 +11,7 @@ var wordEl = document.getElementById("word");
 var phoneticsEl = document.getElementById("phonetics");
 var myKi = "UseyourownKeys";
 var wordOfDayEl = document.getElementById("wordOfDay");
+var keyWordsApi ="";
 
     // TO DO: get DOM elements and assign value
     // TO DO: create an button to mark the word as favourite
@@ -166,3 +167,28 @@ function displayExample(searchResult) {
   exampleEl.innerHTML = examVal.replace(new RegExp(underlinedWord, "gi"), `<u>${underlinedWord}</u>`);
   console.log(examVal);
   }
+
+// =========================== get random word of the day starts ============================== //
+var getRandomWord = function() {
+  fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": keyWordsApi,
+		"x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
+	}
+})
+.then(response => {
+  if (response.ok) {
+    response.json().then(function(data) {
+        return data;
+    });
+} else {
+    alert("Error: " + response.status);
+}
+})
+.catch(err => {
+	console.error(err);
+});
+}
+
+getRandomWord();
