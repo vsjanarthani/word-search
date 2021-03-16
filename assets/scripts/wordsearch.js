@@ -1,6 +1,5 @@
 // Initialise DOM elements
 var searchInputEl = document.getElementById("search-input");
-var searchButtonEl = document.getElementById("search-button");
 var searchButton = document.getElementById("search-button");
 var searchedWordEl = document.getElementById("searched-word");
 var wordDisplayEl = document.getElementById("word-display");
@@ -27,6 +26,8 @@ searchButton.addEventListener('click', () => {
     searchInputEl.value ="";
   }
 });
+
+// Function to fetch definition for searched word
 
 function fetchDefinitionAPI(searchWord) {
 // fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
