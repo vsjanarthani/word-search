@@ -14,6 +14,8 @@ var wordOfDayBtn = document.getElementById("wordOfDay");
 var wordArray = [];
 var favBtn = document.getElementById("add-favs");
 var savedWordListEl = document.getElementById("fav-word");
+var numWords = 10;
+var favWordsEl = $("#fav-word");
 
     // TO DO: get DOM elements and assign value
     // TO DO: create an button to mark the word as favourite
@@ -214,7 +216,12 @@ var wordSaved = function (word) {
           return newSearch;
         }
       }
+      if(wordArray.length < numWords) {
         wordArray.unshift(word);
+      } else {
+        wordArray.pop();
+        wordArray.unshift(word)
+      }
     }
     if (word) {
     localStorage.setItem("wordInfo", JSON.stringify(wordArray));
@@ -243,7 +250,12 @@ var wordBtn = function (wordSearched) {
           return;
         }
       }
+      if(favWordsEl[0].childElement < numWords) {
         var btnWord = btnCreate(wordSearched);
+      } else {
+        favWordsEl[0].removeChild(favWordsEl[0].lastChild);
+        var btnWord = btnCreate(wordSearched);
+      } 
         savedWordListEl.prepend(btnWord);
         $(".word").on("click", function () {
         searchHandler(event);
@@ -251,7 +263,7 @@ var wordBtn = function (wordSearched) {
     }
   };
 
-var listCities = function () {
+var listWords = function () {
   wordArray = JSON.parse(localStorage.getItem("wordInfo"));
   if (wordArray == null) {
     wordArray = [];
