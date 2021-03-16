@@ -11,6 +11,8 @@ var wordEl = document.getElementById("word");
 var phoneticsEl = document.getElementById("phonetics");
 var myKi = "";
 var wordOfDayBtn = document.getElementById("wordOfDay");
+var wordArray = [];
+var favBtn = document.getElementById("add-favs")
 
     // TO DO: get DOM elements and assign value
     // TO DO: create an button to mark the word as favourite
@@ -31,14 +33,14 @@ searchButton.addEventListener('click', () => {
 
 // function to get random word
 var getRandomWord = function() {
-  fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": myKi,
-		"x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
-	}
-})
-// fetch("./assets/scripts/response-wordsapi-randomWord.json")
+//   fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-key": myKi,
+// 		"x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
+// 	}
+// })
+fetch("./assets/scripts/response-wordsapi-randomWord.json")
 .then(response => {
   if (response.ok) {
     response.json().then(function(data) {
@@ -61,15 +63,15 @@ wordOfDayBtn.addEventListener('click', getRandomWord);
 
 
 function fetchDefinitionAPI(searchWord) {
-fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
-  "method": "GET",
-  "headers": {
-    "x-rapidapi-key": myKi,
-    "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
-  }
-})
+// fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
+//   "method": "GET",
+//   "headers": {
+//     "x-rapidapi-key": myKi,
+//     "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
+//   }
+// })
 // fetch request using sample json response
-// fetch("./assets/scripts/response-twinword-definition.json")
+fetch("./assets/scripts/response-twinword-definition.json")
 .then(res => {
     if (res.status != 200) {
       throw Error(res.status + " " + res.statusText);
@@ -107,15 +109,15 @@ function displayDefinition(searchResult) {
 // function to fetch reference for the searched word
 
 function fetchReferenceAPI(searchWord) {
-fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/reference/?entry=${searchWord}`, {
-  "method": "GET",
-  "headers": {
-    "x-rapidapi-key": myKi,
-    "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
-  }
-})
+// fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/reference/?entry=${searchWord}`, {
+//   "method": "GET",
+//   "headers": {
+//     "x-rapidapi-key": myKi,
+//     "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
+//   }
+// })
 // fetch request using sample json response
-// fetch("./assets/scripts/response-twinword-reference.json")
+fetch("./assets/scripts/response-twinword-reference.json")
 .then(res => {
     if (res.status != 200) {
       throw Error(res.status + " " + res.statusText);
@@ -151,15 +153,15 @@ referenceEl.innerHTML = refVal;
 // function to fetch examples for the searched word
 
 function fetchExampleAPI(searchWord) {
-  fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/example/?entry=${searchWord}`, {
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-key": myKi,
-      "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
-    }
-  })
+  // fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/example/?entry=${searchWord}`, {
+  //   "method": "GET",
+  //   "headers": {
+  //     "x-rapidapi-key": myKi,
+  //     "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
+  //   }
+  // })
   // fetch request using sample json response
-  // fetch("./assets/scripts/response-twinword-example.json")
+  fetch("./assets/scripts/response-twinword-example.json")
   .then(res => {
       if (res.status != 200) {
         throw Error(res.status + " " + res.statusText);
@@ -197,5 +199,30 @@ function displayExample(searchResult) {
   exampleEl.innerHTML = examVal.replace(new RegExp(underlinedWord, "gi"), `<u>${underlinedWord}</u>`);
   console.log(examVal);
   }
+
+  // function to save words to local storage
+var wordSaved = function (word) {
+    var newSearch = 0;
+    wordArray = JSON.parse(localStorage.getItem("wordInfo"));
+    if (wordArray == null) {
+      wordArray = [];
+      wordArray.unshift(word);
+    } else {
+      for (var i = 0; i < wordArray.length; i++) {
+        if (word.toLowerCase() == wordArray[i].toLowerCase()) {
+          return newSearch;
+        }
+      }
+        wordArray.unshift(word);
+    }
+    if (word) {
+    localStorage.setItem("wordInfo", JSON.stringify(wordArray));
+    newSearch = 1;
+    return newSearch;
+  }
+  };
+
+  // add event linstener to plus button
+favBtn.addEventListener("click", wordSaved(searchInputEl.val()));
 
 
