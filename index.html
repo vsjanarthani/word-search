@@ -105,13 +105,13 @@
     <!-- Tabs navs -->
 
     <div class="p-3 text-center bg-light">
-      <h1 id="searchedWord" class="mb-3">
-        Neanderthal
+      <h1 id="searched-word" class="mb-3">
+        My Word
         <button id="add-favs" class="translucid m-2">
           <i class="fas fa-plus fa-xs goldie"></i>
         </button>
       </h1>
-      <h6 class="mb-3">en-us | <span id="typeOfWord">Noun</span></h6>
+      <h6 class="mb-3">phonetics:<span id="phonetics"></span></h6>
 
       <ul
         class="nav nav-tabs mb-3 d-flex justify-content-center"
@@ -139,7 +139,7 @@
             role="tab"
             aria-controls="ex1-tabs-2"
             aria-selected="false"
-            >Synonyms</a
+            >Reference</a
           >
         </li>
         <li class="nav-item" role="presentation">
@@ -151,7 +151,7 @@
             role="tab"
             aria-controls="ex1-tabs-3"
             aria-selected="false"
-            >Pronunciation</a
+            >Examples</a
           >
         </li>
       </ul>
@@ -163,64 +163,25 @@
           class="tab-pane fade p-3 m-3 show active"
           id="ex1-tabs-1"
           role="tabpanel"
-          aria-labelledby="ex1-tab-1"
-        >
-          An extint species of human that was widely distributed in ice-age
-          Europe between c. 120,00-35,000 years ago, with a receding forehead
-          and prominent brow ridges. The Neanderthals were associated with the
-          Mousterian flint industry of the Middle Paleolithic
+          aria-labelledby="ex1-tab-1">
+          <p id="definition"></p>
         </div>
         <div
           class="tab-pane fade p-3 m-3 highlighted"
           id="ex1-tabs-2"
           role="tabpanel"
-          aria-labelledby="ex1-tab-2"
-        >
-          <!-- <p id="usage">
-            <span>Meaning: </span> an uncivilized, unintelligent, or uncouth
-            person (typically used of a man)
-          </p> -->
-          <!-- <p id="short"><span>Short Definitions: </span> extinct hominid</p> -->
-          <p id="example">
-            Example: <span id="exampleDescript"> the stereotype of the mechanic as a macho
-            Neanderthal </span>
-          </p>
-          <div class="synonims">
-            <p>Synonyms: <span id="synonyms"> 1. One</span></p>
-          </div>
+          aria-labelledby="ex1-tab-2">
+          <p><span id="reference"></span></p>
         </div>
         <div
           class="tab-pane fade p-3 m-3"
           id="ex1-tabs-3"
           role="tabpanel"
           aria-labelledby="ex1-tab-3">
-          <button id="play-sound" class="p-2 translucid" style="color: #192ff5">
-            <i class="fas fa-play-circle fa-2x"></i>
-          </button>
-          <div>
-            <p>IPA</p>
-            <p id="soundSymbols">soundsymbols</p>
-          </div>
-          <p><span>Dialects: </span> american english</p>
         </div>
+        <p><span id="example"></span></p>
       </div>
       <!-- Tabs content -->
-    </div>
-
-    <!-- Display modal for error messages -->
-
-    <div id="myModal" class="modal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Title:</h5>
-            <button type="button" class="btn-close" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p id="modalbodyval">Sample Text</p>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="clear-footer"></div>
