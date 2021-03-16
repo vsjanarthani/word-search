@@ -1,64 +1,170 @@
 // Initialise DOM elements
 var searchInputEl = document.getElementById("search-input");
 var searchButton = document.getElementById("search-button");
-var myModal = document.getElementById('myModal');
-var myModalTitle = document.querySelector('.modal-title');
-var myModalBody = document.getElementById('modalbodyval');
-var closeModalEl = document.querySelector('.btn-close');
-myModal.classList.add("hide");
-var apiKey = "useKeyIProvideandRemoveitBeforePushing";
+var searchedWordEl = document.getElementById("searched-word");
+var wordDisplayEl = document.getElementById("word-display");
+var definitionEl = document.getElementById("definition");
+var referenceEl = document.getElementById("reference");
+var exampleEl = document.getElementById("example");
+var wordEl = document.getElementById("word"); 
+var phoneticsEl = document.getElementById("phonetics");
+var myKi = "UseyourownKeys";
 
-// Function to get search word
-searchButton.addEventListener('click', () => {
-    var searchWord = searchInputEl.value.trim().toLowerCase();
-    if (searchWord) {
-    //   myModal.setAttribute('class', 'hide');
-      fetchEntriesAPI(searchWord);
-      searchInputEl.value ="";
-    }
-});
-
-// Function to fetch entries endpoint API
-
-function fetchEntriesAPI(searchWord) {
-    
-// fetch request
-  fetch(`https://xf-english-dictionary1.p.rapidapi.com/v1/dictionary?selection=${searchWord}&textAfterSelection=in%20English%20requires%20determination.&synonyms=true&audioFileLinks=true&pronunciations=true&relatedWords=true&antonyms=true&textBeforeSelection=Achieving%20full`, {
-    "method": "POST",
-    "headers": {
-      "content-type": "application/json",
-      "x-rapidapi-key": apiKey,
-      "x-rapidapi-host": "xf-english-dictionary1.p.rapidapi.com"
-    }
-  })
-    // fetch("./response-entries-en-us-neanderthal.json")
-    .then(res => {
-        if (res.status != 200) {
-          throw Error(res.status + " " + res.statusText);
-        } else {
-          return res.json();
-        }
-    })
-    .then((data) => {
-        // call back function to display dictionary data
-        console.log(data);
-        displayData(data);
-    })
-    .catch(error => {
-        myModal.setAttribute('class', 'show');
-        myModalTitle.innerText = "Oops, Something went wrong. Try again";
-        myModalBody.innerText = error;
-        closeModalEl.addEventListener('click',() => {
-          myModal.setAttribute('class', 'hide');
-        });
-      })
-}
-
-// Function to display search results
-function displayData(searchResult) {
-    console.log(searchResult);
     // TO DO: get DOM elements and assign value
     // TO DO: create an button to mark the word as favourite
     // To DO: add an event listner to fav button
     // TO DO: create a function to store the favourite word in local storage
+
+
+// Function to get search word
+searchButton.addEventListener('click', () => {
+  var searchWord = searchInputEl.value.trim().toLowerCase();
+  if (searchWord) {
+    fetchDefinitionAPI(searchWord);
+    fetchReferenceAPI(searchWord);
+    fetchExampleAPI(searchWord)
+    searchInputEl.value ="";
+  }
+});
+
+// Function to fetch definition for searched word
+
+function fetchDefinitionAPI(searchWord) {
+// fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
+//   "method": "GET",
+//   "headers": {
+//     "x-rapidapi-key": myKi,
+//     "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
+//   }
+// })
+//fetch request using sample json response
+fetch("./assets/scripts/response-twinword-definition.json")
+.then(res => {
+    if (res.status != 200) {
+      throw Error(res.status + " " + res.statusText);
+    } else {
+      return res.json();
+    }
+})
+.then((data) => {
+    // call back function to display dictionary data
+    displayDefinition(data);
+})
+.catch(error => {
+  definitionEl.innerText = error;
+})
 }
+
+// Function to display search results
+function displayDefinition(searchResult) {
+  // console.log(searchResult);
+  searchedWordEl.innerText = searchResult.response.toUpperCase();
+  let defintion = searchResult.meaning;
+  var defVal = "";
+  const myDefinition = (input) => Object.entries(input).forEach(([key,value]) => {
+  if (value.length > 0) {
+    defVal = defVal + "<strong>" + key + "</strong>" + ":<br>" + value.replaceAll("\n", ".<br>") + "." + "<br>" ;
+  } else {
+    definitionEl.innerText = "Nothing to Display";
+  }
+  })
+  myDefinition(defintion);
+  definitionEl.innerHTML = defVal;
+  phoneticsEl.innerText = ` ${searchResult.ipa}`;
+}
+
+// function to fetch reference for the searched word
+
+function fetchReferenceAPI(searchWord) {
+// fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/reference/?entry=${searchWord}`, {
+//   "method": "GET",
+//   "headers": {
+//     "x-rapidapi-key": myKi,
+//     "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
+//   }
+// })
+// fetch request using sample json response
+fetch("./assets/scripts/response-twinword-reference.json")
+.then(res => {
+    if (res.status != 200) {
+      throw Error(res.status + " " + res.statusText);
+    } else {
+      return res.json();
+    }
+})
+.then((data) => {
+    // call back function to display dictionary data
+    displayReference(data);
+})
+.catch(error => {
+  referenceEl.innerText = error;
+})
+}
+
+// function to display reference data
+function displayReference(searchResult) {
+// console.log(searchResult);
+let reference = searchResult.relation;
+var refVal = "";
+const myReference = (input) => Object.entries(input).forEach(([key,value]) => {
+  if (value.length > 0) {
+    refVal = refVal + "<strong>" + key + "</strong>" + ":<br>" + value + "." + "<br>" ;
+  } else {
+    referenceEl.innerText = "Nothing to Display";
+  }
+  })
+myReference(reference);
+referenceEl.innerHTML = refVal;
+}
+
+// function to fetch examples for the searched word
+
+function fetchExampleAPI(searchWord) {
+  // fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/example/?entry=${searchWord}`, {
+  //   "method": "GET",
+  //   "headers": {
+  //     "x-rapidapi-key": myKi,
+  //     "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
+  //   }
+  // })
+  // fetch request using sample json response
+  fetch("./assets/scripts/response-twinword-example.json")
+  .then(res => {
+      if (res.status != 200) {
+        throw Error(res.status + " " + res.statusText);
+      } else {
+        return res.json();
+      }
+  })
+  .then((data) => {
+      // call back function to display dictionary data
+      displayExample(data);
+  })
+  .catch(error => {
+    exampleEl.innerText = error;
+  })
+  }
+  
+// function to display example data
+function displayExample(searchResult) {
+  // console.log(searchResult);
+  let example = searchResult.example;
+  let underlinedWord = searchedWordEl.textContent.toLowerCase();
+  console.log(example);
+  var examVal = "";
+  var slNo = 0;
+  const myExample = (input) => Object.entries(input).forEach(([key,value]) => {
+    if (value.length > 0) {
+      slNo++;
+      examVal = `${examVal}${slNo}: ${value}<br>`;
+      console.log(key.length,value.length);
+    } else {
+      exampleEl.innerText = "Nothing to Display";
+    }
+    })
+  myExample(example);
+  exampleEl.innerHTML = examVal.replace(new RegExp(underlinedWord, "gi"), `<u>${underlinedWord}</u>`);
+  console.log(examVal);
+  }
+
+    
