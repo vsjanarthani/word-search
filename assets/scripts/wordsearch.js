@@ -1,5 +1,6 @@
 // Initialise DOM elements
 var searchInputEl = document.getElementById("search-input");
+var searchButtonEl = document.getElementById("search-button");
 var searchButton = document.getElementById("search-button");
 var searchedWordEl = document.getElementById("searched-word");
 var wordDisplayEl = document.getElementById("word-display");
@@ -9,6 +10,7 @@ var exampleEl = document.getElementById("example");
 var wordEl = document.getElementById("word"); 
 var phoneticsEl = document.getElementById("phonetics");
 var myKi = "UseyourownKeys";
+var wordOfDayEl = document.getElementById("wordOfDay");
 
     // TO DO: get DOM elements and assign value
     // TO DO: create an button to mark the word as favourite
@@ -26,8 +28,6 @@ searchButton.addEventListener('click', () => {
     searchInputEl.value ="";
   }
 });
-
-// Function to fetch definition for searched word
 
 function fetchDefinitionAPI(searchWord) {
 // fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
