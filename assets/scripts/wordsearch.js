@@ -12,7 +12,8 @@ var phoneticsEl = document.getElementById("phonetics");
 var myKi = "";
 var wordOfDayBtn = document.getElementById("wordOfDay");
 var wordArray = [];
-var favBtn = document.getElementById("add-favs")
+var favBtn = document.getElementById("add-favs");
+var savedWordListEl = document.getElementById("fav-word");
 
     // TO DO: get DOM elements and assign value
     // TO DO: create an button to mark the word as favourite
@@ -224,5 +225,42 @@ var wordSaved = function (word) {
 
   // add event linstener to plus button
 favBtn.addEventListener("click", wordSaved(searchInputEl.val()));
+
+// display saved words
+var btnCreate = function (text) {
+  var btn = $("<button>").text(text).attr("type", "submit");
+  return btn;
+};
+
+var wordBtn = function (wordSearched) {
+    var words = JSON.parse(localStorage.getItem("wordInfo"));
+    if (words.length == 1) {
+      var btnWord = btnCreate(wordSearched);
+      savedWordListEl.prepend(btnWord);
+    } else {
+      for (var i = 1; i < words.length; i++) {
+        if (wordSearched.toLowerCase() == words[i].toLowerCase()) {
+          return;
+        }
+      }
+        var btnWord = btnCreate(wordSearched);
+        savedWordListEl.prepend(btnWord);
+        $(".word").on("click", function () {
+        searchHandler(event);
+      });
+    }
+  };
+
+var listCities = function () {
+  wordArray = JSON.parse(localStorage.getItem("wordInfo"));
+  if (wordArray == null) {
+    wordArray = [];
+  }
+  for (var i = 0; i < wordArray.length; i++) {
+    var btnName = btnCreate(wordArray[i]);
+    savedWordListEl.append(btnName);
+  }
+};
+
 
 
