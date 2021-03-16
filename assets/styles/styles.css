@@ -79,10 +79,65 @@
   font-weight: bold;
 }
 
-.hide {
+.main, .display, .display-score, .display-storage {
   display: none;
+}
+
+.active {
+  display: flex;   
 }
 
 .show {
   display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.card {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.question h4 {
+  margin: 35px auto 35px auto;
+}
+
+@media screen and (min-width: 575px) {
+
+.card {
+  width:75%;
+  margin: 40px auto 40px auto;
+}
+
+.question h4 {
+  margin: 40px auto 40px auto;
+}
+
+}
+
+@media screen and (min-width: 980px) {
+
+  .card {
+    width:65%;
+    margin: 80px auto 80px auto;
+  }
+
+  .card-title {
+    margin-bottom: 35px;
+  }
+  .card-body h3 {
+    font-size: 48px;
+  }
+
+  .card-body p{
+    font-size: 20px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .question h4 {
+    margin: 55px auto 55px auto;
+  }
 }
