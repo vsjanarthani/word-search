@@ -29,6 +29,37 @@ searchButton.addEventListener('click', () => {
   }
 });
 
+// function to get random word
+var getRandomWord = function() {
+  fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": myKi,
+		"x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
+	}
+})
+// fetch("./assets/scripts/response-wordsapi-randomWord.json")
+.then(response => {
+  if (response.ok) {
+    response.json().then(function(data) {
+      input = String(data.word);
+      fetchDefinitionAPI(input);
+      fetchReferenceAPI(input);
+      fetchExampleAPI(input);
+    });
+} else {
+  definitionEl.innerText = error;
+}
+})
+.catch(err => {
+	console.error(err);
+});
+}
+
+// function to display random word
+wordOfDayBtn.addEventListener('click', getRandomWord);
+
+
 function fetchDefinitionAPI(searchWord) {
 fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
   "method": "GET",
@@ -167,33 +198,4 @@ function displayExample(searchResult) {
   console.log(examVal);
   }
 
-// =========================== get random word of the day starts ============================== //
-var getRandomWord = function() {
-  fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": myKi,
-		"x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
-	}
-})
-// fetch("./assets/scripts/response-wordsapi-randomWord.json")
-.then(response => {
-  if (response.ok) {
-    response.json().then(function(data) {
-      input = String(data.word);
-      console.log(input);
-      fetchDefinitionAPI(input);
-      fetchReferenceAPI(input);
-      fetchExampleAPI(input);
-    });
-} else {
-  definitionEl.innerText = error;
-}
-})
-.catch(err => {
-	console.error(err);
-});
-}
 
-// function to display random word
-wordOfDayBtn.addEventListener('click', getRandomWord);
