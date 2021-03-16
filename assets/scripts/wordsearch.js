@@ -9,9 +9,8 @@ var referenceEl = document.getElementById("reference");
 var exampleEl = document.getElementById("example");
 var wordEl = document.getElementById("word"); 
 var phoneticsEl = document.getElementById("phonetics");
-var myKi = "UseyourownKeys";
-var wordOfDayEl = document.getElementById("wordOfDay");
-var keyWordsApi ="";
+var myKi = "";
+var wordOfDayBtn = document.getElementById("wordOfDay");
 
     // TO DO: get DOM elements and assign value
     // TO DO: create an button to mark the word as favourite
@@ -31,15 +30,15 @@ searchButton.addEventListener('click', () => {
 });
 
 function fetchDefinitionAPI(searchWord) {
-// fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
-//   "method": "GET",
-//   "headers": {
-//     "x-rapidapi-key": myKi,
-//     "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
-//   }
-// })
-//fetch request using sample json response
-fetch("./assets/scripts/response-twinword-definition.json")
+fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
+  "method": "GET",
+  "headers": {
+    "x-rapidapi-key": myKi,
+    "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
+  }
+})
+// fetch request using sample json response
+// fetch("./assets/scripts/response-twinword-definition.json")
 .then(res => {
     if (res.status != 200) {
       throw Error(res.status + " " + res.statusText);
@@ -77,15 +76,15 @@ function displayDefinition(searchResult) {
 // function to fetch reference for the searched word
 
 function fetchReferenceAPI(searchWord) {
-// fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/reference/?entry=${searchWord}`, {
-//   "method": "GET",
-//   "headers": {
-//     "x-rapidapi-key": myKi,
-//     "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
-//   }
-// })
+fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/reference/?entry=${searchWord}`, {
+  "method": "GET",
+  "headers": {
+    "x-rapidapi-key": myKi,
+    "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
+  }
+})
 // fetch request using sample json response
-fetch("./assets/scripts/response-twinword-reference.json")
+// fetch("./assets/scripts/response-twinword-reference.json")
 .then(res => {
     if (res.status != 200) {
       throw Error(res.status + " " + res.statusText);
@@ -121,15 +120,15 @@ referenceEl.innerHTML = refVal;
 // function to fetch examples for the searched word
 
 function fetchExampleAPI(searchWord) {
-  // fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/example/?entry=${searchWord}`, {
-  //   "method": "GET",
-  //   "headers": {
-  //     "x-rapidapi-key": myKi,
-  //     "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
-  //   }
-  // })
+  fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/example/?entry=${searchWord}`, {
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-key": myKi,
+      "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
+    }
+  })
   // fetch request using sample json response
-  fetch("./assets/scripts/response-twinword-example.json")
+  // fetch("./assets/scripts/response-twinword-example.json")
   .then(res => {
       if (res.status != 200) {
         throw Error(res.status + " " + res.statusText);
@@ -173,17 +172,22 @@ var getRandomWord = function() {
   fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": keyWordsApi,
+		"x-rapidapi-key": myKi,
 		"x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
 	}
 })
+// fetch("./assets/scripts/response-wordsapi-randomWord.json")
 .then(response => {
   if (response.ok) {
     response.json().then(function(data) {
-        return data.word;
+      input = String(data.word);
+      console.log(input);
+      fetchDefinitionAPI(input);
+      fetchReferenceAPI(input);
+      fetchExampleAPI(input);
     });
 } else {
-    alert("Error: " + response.status);
+  definitionEl.innerText = error;
 }
 })
 .catch(err => {
@@ -191,4 +195,5 @@ var getRandomWord = function() {
 });
 }
 
-getRandomWord();
+// function to display random word
+wordOfDayBtn.addEventListener('click', getRandomWord);
