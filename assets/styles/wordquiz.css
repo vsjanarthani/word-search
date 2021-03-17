@@ -12,8 +12,8 @@ html {
 
 body {
     font-family: 'Times New Roman', Times, serif; 
-    margin: 10px;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -35,12 +35,12 @@ p {
 /* Header Section */
 
 .header {
-    width: 90%;
-    margin: 10px;
-    padding: 10px;
+    width: 105%;
+    height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: #0818a8;
 }
     
 .title a,
@@ -48,9 +48,10 @@ p {
 #timervalue {
     font-size: small;
     width: 60%;
-    color: teal;
+    color: #ddd;
     font-weight: bolder;
-    text-decoration: none;   
+    text-decoration: none;  
+    font-family: sans-serif; 
 }
 
 .timer {
@@ -68,10 +69,10 @@ p {
 /* Start Quiz Section */
 
 .container {
-    width: 90%;
+    width: 100%;
     height: 100%;
-    margin: 10px;
-    padding: 10PX;
+    margin: 20px 20px 20px 8px;
+    padding: 20PX;
     line-height: 2.5vh;
     display: flex;
     flex-direction: column;
@@ -98,7 +99,7 @@ span {
 .start,
 .submit,
 .btn {
-    background-color: teal;
+    background-color: #0818a8;
     font-size: small;
     margin: 5px;
     padding: 7px;
@@ -146,13 +147,16 @@ span {
 
 .question h2 {
     font-size: medium;
+    text-align: start;
+    padding-left: 20px;
 }
 .question h3 {
     margin: 10px 0;
     font-weight: normal;
     font-size: medium;
     width: 80%;
-    text-align: left;
+    text-align: start;
+    padding-left: 20px;
 }
 
 .options {
@@ -162,7 +166,7 @@ span {
 }
 
 .choice {
-    background-color: teal;
+    background-color: #0818a8;
     font-size: small;
     margin: 5px;
     padding: 7px;
@@ -229,7 +233,7 @@ span {
 /* Display High Score Section */
 
 .display-storage {
-    width: 90%;
+    width: 100%;
     height: 100%;
     position: absolute;
     top:80px;
@@ -304,7 +308,7 @@ span {
     .submit,
     .btn,
     .choice {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .choice {
@@ -331,6 +335,7 @@ span {
 /* For laptops */
 
 @media screen and (min-width: 1200px) {
+
     h1 {
         font-size: 3rem;  
     }
@@ -361,9 +366,21 @@ span {
         width: 200px;
     }
 
+    .display,
+    .container {
+        padding: 80px;
+    }
+
     .questions {
         justify-content: flex-start ;
         align-items: center;
+    }
+    .questions h2 {
+        font-size: 1.5rem;
+    }
+
+    .questions h3 {
+        font-size: 1.2rem;
     }
 
     .options {
