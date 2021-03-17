@@ -56,7 +56,6 @@ if(randomWordSaved) {
 // To DO: add an event listner to fav button
 // TO DO: create a function to store the favourite word in local storage
 
-
 // Function to get search word
 searchButton.addEventListener('click', () => {
   var searchWord = searchInputEl.value.trim().toLowerCase();
