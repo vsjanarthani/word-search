@@ -94,7 +94,7 @@ fetch("./assets/scripts/response-twinword-definition.json")
 // Function to display search results
 function displayDefinition(searchResult) {
   // console.log(searchResult);
-  searchedWordEl.innerText = searchResult.response.toUpperCase();
+  searchedWordEl.textContent = searchResult?.response?.toUpperCase();
   let defintion = searchResult.meaning;
   var defVal = "";
   const myDefinition = (input) => Object.entries(input).forEach(([key,value]) => {
@@ -203,7 +203,9 @@ function displayExample(searchResult) {
   console.log(examVal);
   }
 
-  // function to save words to local storage
+//=========================Save Word to localStorage=======================================//
+
+// function to save words to local storage
 var wordSaved = function (word) {
     var newSearch = 0;
     wordArray = JSON.parse(localStorage.getItem("wordInfo"));
@@ -230,8 +232,8 @@ var wordSaved = function (word) {
   }
   };
 
-  // add event linstener to plus button
-favBtn.addEventListener("click", wordSaved(searchInputEl.val()));
+// add event linstener to plus button
+favBtn.addEventListener("click", wordSaved(searchedWordEl.value));
 
 // display saved words
 var btnCreate = function (text) {
@@ -282,6 +284,8 @@ var searchHandler = function (event) {
   fetchReferenceAPI(wordSearched);
   fetchExampleAPI(wordSearched);
 };
+
+//=========================Save Word to localStorage=======================================//
 
 
 
