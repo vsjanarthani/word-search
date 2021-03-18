@@ -27,6 +27,8 @@
       @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
     </style>
 
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- My stylesheet -->
     <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
@@ -78,6 +80,22 @@
       </div>
     </nav>
 
+    <!--TRANSLATION ADDED-->
+    <div id="google_translate_element" class="text-center mt-5 mb-5"></div>
+
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
     <!-- Search Section -->
     <div class="subheader">
       <section class="searchbox container-fluid">
@@ -118,20 +136,30 @@
       </div>
     </div>
 
+
+   
+    
+    
+    
     <div class="clear-footer"></div>
 
-    <!-- Footer section -->
-    <footer class="text-center text-lg-start fixed-bottom golden">
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        Data Source:
-        <a class="text-dark" href="https://oxforddictionaries.com/"
-          >oxforddictionaries.com</a
-        >
 
-        <div class="text-center">Made by Team</div>
-      </div>
-      <!-- Copyright -->
+<!-- Footer section -->
+<footer class="text-center text-lg-start fixed-bottom golden">
+  <!-- Copyright -->
+  <div class="text-center p-3 text-white" style="background-color: #501050">
+    Data Source:
+    <a class="text-white" href="#">Rapid API</a>
+    <div class="text-center text-white">Made by Team Bootcamp</div>
+  </div>
+  <!-- Copyright -->
+    
+</footer>
+
+
+
+
+
     </footer>
 
     <script src="./assets/scripts/oxford API.js"></script>
