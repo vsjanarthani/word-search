@@ -10,7 +10,6 @@ var exampleEl = document.getElementById("example");
 var wordEl = document.getElementById("word");
 var phoneticsEl = document.getElementById("phonetics");
 var myKi = "";
-var wordOfDayBtn = document.getElementById("wordOfDay");
 var wordArray = [];
 var favBtn = document.getElementById("add-favs");
 var savedWordListEl = document.getElementById("fav-word");
@@ -24,15 +23,15 @@ if(randomWordSaved) {
   fetchReferenceAPI(randomWordSaved);
   fetchExampleAPI(randomWordSaved);
 } else {
-  fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
+  /*fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
       "method": "GET",
       "headers": {
         "x-rapidapi-key": myKi,
         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
       }
-    })
+    })*/
   
-      // fetch("./assets/scripts/response-wordsapi-randomWord.json")
+      fetch("./assets/scripts/response-wordsapi-randomWord.json")
       .then(response => {
         console.log('yeeeee')
         if (response.ok) {
@@ -73,15 +72,15 @@ searchButton.addEventListener('click', () => {
 
 (function() {
   setInterval(function () {
-    fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
+    /*fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
       "method": "GET",
       "headers": {
         "x-rapidapi-key": myKi,
         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
       }
-    })
+    })*/
   
-      // fetch("./assets/scripts/response-wordsapi-randomWord.json")
+  fetch("./assets/scripts/response-wordsapi-randomWord.json")
       .then(response => {
         console.log('yeeeee')
         if (response.ok) {
@@ -104,20 +103,16 @@ searchButton.addEventListener('click', () => {
 })();
 
 
-// function to display random word
-// wordOfDayBtn.addEventListener('click', getRandomWord);
-
-
 function fetchDefinitionAPI(searchWord) {
-  fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
+  /*fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
     "method": "GET",
     "headers": {
       "x-rapidapi-key": myKi,
       "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
     }
-  })
-  // fetch request using sample json response
-  // fetch("./assets/scripts/response-twinword-definition.json")
+  })*/
+    // fetch request using sample json response
+  fetch("./assets/scripts/response-twinword-definition.json")
     .then(res => {
       if (res.status != 200) {
         throw Error(res.status + " " + res.statusText);
@@ -158,15 +153,15 @@ function displayDefinition(searchResult) {
 // function to fetch reference for the searched word
 
 function fetchReferenceAPI(searchWord) {
-  fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/reference/?entry=${searchWord}`, {
+  /*fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/reference/?entry=${searchWord}`, {
     "method": "GET",
     "headers": {
       "x-rapidapi-key": myKi,
       "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
     }
-  })
+  })*/
   // fetch request using sample json response
-  // fetch("./assets/scripts/response-twinword-reference.json")
+  fetch("./assets/scripts/response-twinword-reference.json")
     .then(res => {
       if (res.status != 200) {
         throw Error(res.status + " " + res.statusText);
@@ -205,15 +200,15 @@ function displayReference(searchResult) {
 // function to fetch examples for the searched word
 
 function fetchExampleAPI(searchWord) {
-  fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/example/?entry=${searchWord}`, {
+  /*fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/example/?entry=${searchWord}`, {
     "method": "GET",
     "headers": {
       "x-rapidapi-key": myKi,
       "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
     }
-  })
-  // fetch request using sample json response
-  // fetch("./assets/scripts/response-twinword-example.json")
+  })*/
+    // fetch request using sample json response
+  fetch("./assets/scripts/response-twinword-example.json")
     .then(res => {
       if (res.status != 200) {
         throw Error(res.status + " " + res.statusText);

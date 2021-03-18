@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .navbar {
-  background-color: #0818a8;
+  background-color: #501050;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: antiquewhite;
 }
@@ -25,8 +25,18 @@
 }
 
 .my-blue {
-  background-color: #3347ff;
+  background-color: #501050;
 }
+
+.bg-light {
+  background-color: #f5f3f3 !important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #501050 !important;
+}
+
 
 .full-opacity {
   opacity: 100%;
@@ -36,7 +46,6 @@
   background-color: transparent;
 }
 .translucid {
-  opacity: 75%;
   background: transparent;
   border: none;
 }
@@ -54,7 +63,7 @@
 }
 
 .golden {
-  background-color: #f5c418;
+  background-color: #d6cdd3;
 }
 
 .highlighted span {
@@ -165,6 +174,7 @@
     margin: 65px auto 65px auto;
     width: 30%;
     justify-self: center; 
+    border-radius: 15px;
  }
 
  .tab-pane {
@@ -175,5 +185,24 @@
 }
  .main-text-reference {
    justify-self: center;
+   
  }
 }
+
+/*GOOGLE*/
+
+.goog-logo-link {
+  display: none;
+}
+
+
+
+body{
+
+	/*background: linear-gradient(25deg, #8600b3 50%, #cc33ff 50%);*/
+  background-image: url("/word-search/assets/images/dictionary-app.jpg");
+}
+
+
+
+ 
