@@ -10,7 +10,6 @@ var exampleEl = document.getElementById("example");
 var wordEl = document.getElementById("word");
 var phoneticsEl = document.getElementById("phonetics");
 var myKi = "";
-var wordOfDayBtn = document.getElementById("wordOfDay");
 var wordArray = [];
 var favBtn = document.getElementById("add-favs");
 var savedWordListEl = document.getElementById("fav-word");
@@ -102,10 +101,6 @@ searchButton.addEventListener('click', () => {
   
   }, 1000 * 60 * 60 * 24);
 })();
-
-
-// function to display random word
-// wordOfDayBtn.addEventListener('click', getRandomWord);
 
 
 function fetchDefinitionAPI(searchWord) {
