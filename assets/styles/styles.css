@@ -17,6 +17,10 @@
   justify-content: center;
 }
 
+.fav-words{
+  display: flex;
+}
+
 .title {
   display: flex;
   align-self: center;
@@ -191,6 +195,11 @@
    
  }
 }
+
+
+
+
+ 
 
 
 
