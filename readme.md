@@ -31,15 +31,25 @@ Please find the project repository here - [(https://github.com/vsjanarthani/word
 
 ## Screenshot of the Deployed Webpage
 * Word Search (Main Page)
+
 ![code](./assets/images/word-search-main.jpg)
 
 * Word Quiz
+
 ![code](./assets/images/word-quiz.jpg)
 
 * Translation
+
 ![code](./assets/images/translation.jpg)
 
 
 
 ## Contribution
+
+* Janarthani Subbramaniam
+* Shirin Shahram
+* Maria Donaji Velazquez
+* Andrea Salazar
+* Muhammad Tariq
+
 Made with :heart: by **Team**
