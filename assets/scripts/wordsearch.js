@@ -210,13 +210,13 @@ function favWordDisplay() {
 favWordDisplay();
 
 // Function to pass favWord as the search input - TO DO
-// favSearchEl.addEventListener("click", function (event) {
-//     if (event.target.classList == "btn btn-primary ripple-surface fav") {
-//         var searchWord = event.target.innerText.toLowerCase();
-//         console.log(searchWord);
-//         fetchDefinitionAPI(searchWord);
-//         fetchReferenceAPI(searchWord);
-//         fetchExampleAPI(searchWord);
-// }
-// });
+favSearchEl.addEventListener("click", function (event) {
+    if (event.target.classList == "btn btn-primary ripple-surface fav") {
+        var searchWord = event.target.innerText.toLowerCase();
+        console.log(searchWord);
+        fetchDefinitionAPI(searchWord);
+        fetchReferenceAPI(searchWord);
+        fetchExampleAPI(searchWord);
+}
+});
   
