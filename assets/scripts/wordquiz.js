@@ -97,7 +97,7 @@ function displayQuiz(ques) {
 
 // Event listner for clicking on the options
 clickedEl.addEventListener("click", function (event) {
-  if (event.target.classList == "btn btn-primary choice ripple-surface") {
+  if (event.target.classList == "btn choice ripple-surface") {
     var myAns = event.target.name;
     var userAns = parseInt(myAns);
     verifyAns(userAns);
@@ -149,7 +149,7 @@ function displayScore() {
 function storeData() {
   // Get new data
   var newScore = score;
-  var newInitial = document.getElementById("form1").value;
+  var newInitial = document.querySelector('#initial').value;
   var newData = { score: newScore, initial: newInitial };
 
   if (localStorage.getItem("highScores") == null) {

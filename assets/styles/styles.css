@@ -37,7 +37,6 @@
   background-color: #501050 !important;
 }
 
-
 .full-opacity {
   opacity: 100%;
 }
@@ -69,6 +68,12 @@
 .highlighted span {
   font-weight: bolder;
 }
+
+.fav {
+  margin: 15px;
+  max-width: 200px;
+}
+
 /* Modal section */
 
 .modal {
@@ -144,8 +149,6 @@
 
 }
 
-
-
 @media screen and (min-width: 980px) {
 
   .card {
@@ -189,19 +192,6 @@
  }
 }
 
-/*GOOGLE*/
-
-.goog-logo-link {
-  display: none;
-}
-
-
-
-body{
-
-	/*background: linear-gradient(25deg, #8600b3 50%, #cc33ff 50%);*/
-  background-image: url("/word-search/assets/images/dictionary-app.jpg");
-}
 
 
 

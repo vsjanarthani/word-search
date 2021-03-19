@@ -40,7 +40,9 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #0818a8;
+    background-color: #501050;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-right: 20px;
 }
     
 .title a,
@@ -48,7 +50,7 @@ p {
 #timervalue {
     font-size: small;
     width: 60%;
-    color: #ddd;
+    color: whitesmoke;
     font-weight: bolder;
     text-decoration: none;  
     font-family: sans-serif; 
@@ -71,7 +73,7 @@ p {
 .container {
     width: 100%;
     height: 100%;
-    margin: 20px 20px 20px 8px;
+    margin: 20px 20px 20px 0px;
     padding: 20PX;
     line-height: 2.5vh;
     display: flex;
@@ -99,7 +101,7 @@ span {
 .start,
 .submit,
 .btn {
-    background-color: #0818a8;
+    background-color: #501050;
     font-size: small;
     margin: 5px;
     padding: 7px;
@@ -108,10 +110,16 @@ span {
     color: whitesmoke;
 }
 
+.btn {
+    display: block;
+    text-align: center;
+}
+
 .start:hover,
 .submit:hover,
 .btn:hover {
-    background-color: purple;
+    color: #fff;
+  background-color: #693869 !important;
 }
 
 /* Display Question section  */
@@ -135,7 +143,6 @@ span {
     height: 80%;
     position: fixed;  
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
 }
@@ -159,6 +166,10 @@ span {
     padding-left: 20px;
 }
 
+.questions h5 {
+    font-size: large;
+}
+
 .options {
     display: flex;
     flex-direction: column;
@@ -166,19 +177,15 @@ span {
 }
 
 .choice {
-    background-color: #0818a8;
+    color: #fff;
+    background-color: #501050 !important;
     font-size: small;
     margin: 5px;
     padding: 7px;
     border-radius: 0.5rem;
     cursor: pointer;
-    color: whitesmoke;
     width: 150px;
     text-align: left;
-}
-
-.choice:hover {
-    background-color: purple;
 }
 
 .user-answer {
@@ -249,7 +256,7 @@ span {
     height: fit-content;
     width: 70%;
     text-align: center;
-    color: teal;
+    color: #501050;
     font-weight: bolder;
     font-style: italic;
     font-family: cursive;
@@ -257,6 +264,7 @@ span {
 
 .displaybtn {
     margin: 25px;
+    display: flex;
 }
 
 #go-back {
@@ -298,6 +306,10 @@ span {
         font-size: 2rem;  
     }
 
+    .container {
+        margin: 20px;
+    }
+
     .user-answer h2,
     h3,
     p,
@@ -308,7 +320,7 @@ span {
     .submit,
     .btn,
     .choice {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .choice {
@@ -366,11 +378,6 @@ span {
         width: 200px;
     }
 
-    .display,
-    .container {
-        padding: 80px;
-    }
-
     .questions {
         justify-content: flex-start ;
         align-items: center;
@@ -378,7 +385,9 @@ span {
     .questions h2 {
         font-size: 1.5rem;
     }
-
+    .questions h5 {
+        font-size: 2rem;
+    }
     .questions h3 {
         font-size: 1.2rem;
     }
