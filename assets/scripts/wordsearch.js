@@ -9,51 +9,9 @@ var referenceEl = document.getElementById("reference");
 var exampleEl = document.getElementById("example");
 var wordEl = document.getElementById("word");
 var phoneticsEl = document.getElementById("phonetics");
-var myKi = "";
-var wordArray = [];
 var favBtn = document.getElementById("add-favs");
-var savedWordListEl = document.getElementById("fav-word");
-var numWords = 10;
-var favWordsEl = $("#fav-word");
-
-var randomWordSaved = localStorage.getItem("rdmWord");
-
-if(randomWordSaved) {
-  fetchDefinitionAPI(randomWordSaved);
-  fetchReferenceAPI(randomWordSaved);
-  fetchExampleAPI(randomWordSaved);
-} else {
-  /*fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-key": myKi,
-        "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
-      }
-    })*/
-  
-      fetch("./assets/scripts/response-wordsapi-randomWord.json")
-      .then(response => {
-        console.log('yeeeee')
-        if (response.ok) {
-          response.json().then(function (data) {
-            localStorage.setItem("rdmWord", data.word);
-            input = String(data.word);
-            fetchDefinitionAPI(input);
-            fetchReferenceAPI(input);
-            fetchExampleAPI(input);
-          });
-        } else {
-          definitionEl.innerText = error;
-        }
-      })
-      .catch(err => {
-        console.error(err);
-      });
-}
-// TO DO: get DOM elements and assign value
-// TO DO: create an button to mark the word as favourite
-// To DO: add an event listner to fav button
-// TO DO: create a function to store the favourite word in local storage
+var favSearchEl = document.getElementById("fav-search");
+var myKi = "a9948976b7msh01160229121d1b6p1fd4d3jsnf2012c72efd4";
 
 // Function to get search word
 searchButton.addEventListener('click', () => {
@@ -67,52 +25,17 @@ searchButton.addEventListener('click', () => {
 });
 
 
-
-// function to get random word
-
-(function() {
-  setInterval(function () {
-    /*fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-key": myKi,
-        "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
-      }
-    })*/
-  
-  fetch("./assets/scripts/response-wordsapi-randomWord.json")
-      .then(response => {
-        console.log('yeeeee')
-        if (response.ok) {
-          response.json().then(function (data) {
-            localStorage.setItem("rdmWord", data.word);
-            input = String(data.word);
-            fetchDefinitionAPI(input);
-            fetchReferenceAPI(input);
-            fetchExampleAPI(input);
-          });
-        } else {
-          definitionEl.innerText = error;
-        }
-      })
-      .catch(err => {
-        console.error(err);
-      });
-  
-  }, 1000 * 60 * 60 * 24);
-})();
-
-
+// Function to fetch difinition API
 function fetchDefinitionAPI(searchWord) {
-  /*fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
+  fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/definition/?entry=${searchWord}`, {
     "method": "GET",
     "headers": {
       "x-rapidapi-key": myKi,
       "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
     }
-  })*/
-    // fetch request using sample json response
-  fetch("./assets/scripts/response-twinword-definition.json")
+  })
+  // fetch request using sample json response
+  // fetch("./assets/scripts/response-twinword-definition.json")
     .then(res => {
       if (res.status != 200) {
         throw Error(res.status + " " + res.statusText);
@@ -122,9 +45,6 @@ function fetchDefinitionAPI(searchWord) {
     })
     .then((data) => {
       // call back function to display dictionary data
-     if(data.result_msg === "Entry word not found") {
-        return;
-      }
       displayDefinition(data);
     })
     .catch(error => {
@@ -134,8 +54,8 @@ function fetchDefinitionAPI(searchWord) {
 
 // Function to display search results
 function displayDefinition(searchResult) {
-  // console.log(searchResult);
-  searchedWordEl.innerText = searchResult?.response?.toUpperCase();
+  console.log(searchResult);
+  searchedWordEl.innerText = searchResult.response.toUpperCase();
   let defintion = searchResult.meaning;
   var defVal = "";
   const myDefinition = (input) => Object.entries(input).forEach(([key, value]) => {
@@ -153,15 +73,15 @@ function displayDefinition(searchResult) {
 // function to fetch reference for the searched word
 
 function fetchReferenceAPI(searchWord) {
-  /*fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/reference/?entry=${searchWord}`, {
+  fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/reference/?entry=${searchWord}`, {
     "method": "GET",
     "headers": {
       "x-rapidapi-key": myKi,
       "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
     }
-  })*/
+  })
   // fetch request using sample json response
-  fetch("./assets/scripts/response-twinword-reference.json")
+  // fetch("./assets/scripts/response-twinword-reference.json")
     .then(res => {
       if (res.status != 200) {
         throw Error(res.status + " " + res.statusText);
@@ -171,9 +91,6 @@ function fetchReferenceAPI(searchWord) {
     })
     .then((data) => {
       // call back function to display dictionary data
-      if(data.result_msg === "Entry word not found") {
-        return;
-      }
       displayReference(data);
     })
     .catch(error => {
@@ -200,15 +117,15 @@ function displayReference(searchResult) {
 // function to fetch examples for the searched word
 
 function fetchExampleAPI(searchWord) {
-  /*fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/example/?entry=${searchWord}`, {
+  fetch(`https://twinword-word-graph-dictionary.p.rapidapi.com/example/?entry=${searchWord}`, {
     "method": "GET",
     "headers": {
       "x-rapidapi-key": myKi,
       "x-rapidapi-host": "twinword-word-graph-dictionary.p.rapidapi.com"
     }
-  })*/
-    // fetch request using sample json response
-  fetch("./assets/scripts/response-twinword-example.json")
+  })
+  // fetch request using sample json response
+  // fetch("./assets/scripts/response-twinword-example.json")
     .then(res => {
       if (res.status != 200) {
         throw Error(res.status + " " + res.statusText);
@@ -217,10 +134,7 @@ function fetchExampleAPI(searchWord) {
       }
     })
     .then((data) => {
-      console.log(data);
-      if(data.result_msg === "Entry word not found") {
-        return;
-      }
+      // console.log(data);
       // call back function to display dictionary data
       displayExample(data);
     })
@@ -231,107 +145,78 @@ function fetchExampleAPI(searchWord) {
 
 // function to display example data
 function displayExample(searchResult) {
-  console.log(searchResult);
+  // console.log(searchResult);
   let example = searchResult.example;
-  let underlinedWord = searchedWordEl.textContent.toLowerCase() ?  searchedWordEl.textContent.toLowerCase() : localStorage.getItem('rdmWrd');
+  let underlinedWord = searchedWordEl.textContent.toLowerCase() ? searchedWordEl.textContent.toLowerCase() : localStorage.getItem('rdmWrd');
   // let underlinedWord = localStorage.getItem('rdmWrd');
-
-  console.log(example);
   var examVal = "";
   var slNo = 0;
   const myExample = (input) => Object.entries(input).forEach(([key, value]) => {
     if (value.length > 0) {
       slNo++;
       examVal = `${examVal}${slNo}: ${value}<br>`;
-      console.log(key.length, value.length);
+      // console.log(key.length, value.length);
     } else {
       exampleEl.innerText = "Nothing to Display";
     }
   })
   myExample(example);
   exampleEl.innerHTML = examVal.replace(new RegExp(underlinedWord, "gi"), `<u>${underlinedWord}</u>`);
-  console.log(examVal);
 }
 
+// Function to add favoutite word to favoutite words HTML
 
-//========================Save Word to localStorage=====================================================//
-// function to save words to local storage
-var wordSaved = function (word) {
-  var newSearch = 0;
-  wordArray = JSON.parse(localStorage.getItem("wordInfo"));
-  if (wordArray == null) {
-    wordArray = [];
-    wordArray.unshift(word);
-  } else {
-    for (var i = 0; i < wordArray.length; i++) {
-      if (word.toLowerCase() == wordArray[i].toLowerCase()) {
-        return newSearch;
-      }
-    }
-    if (wordArray.length < numWords) {
-      wordArray.unshift(word);
-    } else {
-      wordArray.pop();
-      wordArray.unshift(word)
-    }
-  }
-  if (word) {
-    localStorage.setItem("wordInfo", JSON.stringify(wordArray));
-    newSearch = 1;
-    return newSearch;
-  }
-};
+favBtn.addEventListener('click', () => {
+  var favWord = searchedWordEl.innerText;
+  console.log(favWord);
+// store the search result in local storage
+if (localStorage.getItem('saved-word') == null) {
+  savedWord = [];
+} else {
+  savedWord = JSON.parse(localStorage.getItem('saved-word'));
+}
 
-// add event linstener to plus button
-favBtn.addEventListener("click", wordSaved(searchInputEl.value));
+if (!savedWord.includes(favWord)) {
 
-// display saved words
-var btnCreate = function (text) {
-  var btn = $("<button>").text(text).attr("type", "submit");
-  return btn;
-};
+  // Add new data to the exisitng data
+  savedWord.push(favWord);
+}
+// To display last 5 searches
+if (savedWord.length > 20) {
+  savedWord.shift();
+}
 
-var wordBtn = function (wordSearched) {
-  var words = JSON.parse(localStorage.getItem("wordInfo"));
-  if (words.length == 1) {
-    var btnWord = btnCreate(wordSearched);
-    savedWordListEl.prepend(btnWord);
-  } else {
-    for (var i = 1; i < words.length; i++) {
-      if (wordSearched.toLowerCase() == words[i].toLowerCase()) {
-        return;
-      }
-    }
-    if (favWordsEl[0].childElement < numWords) {
-      var btnWord = btnCreate(wordSearched);
-    } else {
-      favWordsEl[0].removeChild(favWordsEl[0].lastChild);
-      var btnWord = btnCreate(wordSearched);
-    }
-    savedWordListEl.prepend(btnWord);
-    $(".word").on("click", function () {
-      searchHandler(event);
+localStorage.setItem('saved-word', JSON.stringify(savedWord));
+
+// Call back function to display searched city
+favWordDisplay();
+})
+
+// Function to apend and display Fav Words
+function favWordDisplay() {
+  favSearchEl.innerHTML = "";
+  savedWord = JSON.parse(localStorage.getItem('saved-word'));
+  if (savedWord != null) {
+    savedWord.forEach(element => {
+      var buttonEl = document.createElement('button');
+      buttonEl.setAttribute("class", "btn btn-primary ripple-surface fav");
+      buttonEl.setAttribute("type", "button");
+      buttonEl.setAttribute("href", "./index.html");
+      buttonEl.innerText = element;
+      favSearchEl.appendChild(buttonEl);
     });
   }
-};
+}
+favWordDisplay();
 
-var listWords = function () {
-  wordArray = JSON.parse(localStorage.getItem("wordInfo"));
-  if (wordArray == null) {
-    wordArray = [];
-  }
-  for (var i = 0; i < wordArray.length; i++) {
-    var btnName = btnCreate(wordArray[i]);
-    savedWordListEl.append(btnName);
-  }
-};
-
-// function to show information for the saved word
-var searchHandler = function (event) {
-  event.preventDefault();
-  var wordSearched = event.target.textContent.trim();
-  fetchDefinitionAPI(wordSearched);
-  fetchReferenceAPI(wordSearched);
-  fetchExampleAPI(wordSearched);
-};
-//========================Save Word to localStorage=====================================================//
+// Function to pass favWord as the search input - TO DO
+// favSearchEl.addEventListener("click", function (event) {
+//     if (event.target.classList == "btn btn-primary ripple-surface fav") {
+//         var searchWord = event.target.innerText.toLowerCase();
+//         console.log(searchWord);
+//         fetchDefinitionAPI(searchWord);
+//         fetchReferenceAPI(searchWord);
+//         fetchExampleAPI(searchWord);
+// }
+// });
+  

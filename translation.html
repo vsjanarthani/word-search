@@ -1,167 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Word Search</title>
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
-      rel="stylesheet"
-    />
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Search</title>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      rel="stylesheet"
-    />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 
-    <!-- Google Fonts -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-    </style>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
 
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts -->
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+  </style>
 
-    <!-- My stylesheet -->
-    <link rel="stylesheet" href="./assets/styles/styles.css" />
-  </head>
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <body>
-    <!-- Header section -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <a class="navbar-brand gold" href="./index.html" style="color: white"
-          >Word
-          <span class="goldie">Search</span>
-          <i class="fas fa-search gold p-0 m-0"></i>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fas fa-bars text-light"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item translucid">
-              <a class="nav-link text-light" aria-current="page" href="#"
-                >Word of the day</a
-              >
-            </li>
-            <li class="nav-item translucid">
-              <a class="nav-link text-light" href="./fav-words.html"
-                >Favorite words</a
-              >
-            </li>
-            <li class="nav-item translucid">
-              <a class="nav-link text-light" href="./wordquiz.html"
-                >Word Quiz</a
-              >
-            </li>
-            <li class="nav-item translucid">
-              <a class="nav-link text-light" href="./translation.html"
-                >Translation</a
-              >
-            </li>
-          </ul>
-        </div>
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="./assets/styles/styles.css" />
+</head>
+
+<body>
+  <!-- Header section -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand gold" href="./index.html" style="color: white">Word
+        <span class="goldie">Search</span>
+        <i class="fas fa-search gold p-0 m-0"></i>
+      </a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-light"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item translucid">
+            <a class="nav-link text-light" aria-current="page" href="#">Word of the day</a>
+          </li>
+          <li class="nav-item translucid">
+            <a class="nav-link text-light" href="./wordquiz.html">Word Quiz</a>
+          </li>
+          <li class="nav-item translucid">
+            <a class="nav-link text-light" href="./translation.html">Translation</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!--TRANSLATION ADDED-->
-    <div id="google_translate_element" class="text-center mt-5 mb-5"></div>
+  <!--TRANSLATION ADDED-->
+  <div id="google_translate_element" class="text-center mt-5 mb-5"></div>
 
-    <script type="text/javascript">
+  <script type="text/javascript">
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
     }
-    </script>
-    
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </script>
+
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
+  <!-- Search Section -->
+  <div class="subheader">
+    <section class="searchbox container-fluid">
+      <div class="input-group rounded">
+        <input type="search" class="form-control rounded full-opacity" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" id="search-input" />
 
+        <button id="search-button" type="button" class="btn btn-primary my-blue full-opacity">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </section>
+  </div>
 
+  <!-- Display modal for error messages -->
 
-
-    <!-- Search Section -->
-    <div class="subheader">
-      <section class="searchbox container-fluid">
-        <div class="input-group rounded">
-          <input
-            type="search"
-            class="form-control rounded full-opacity"
-            placeholder="Search"
-            aria-label="Search"
-            aria-describedby="search-addon"
-            id="search-input"
-          />
-
-          <button
-            id="search-button"
-            type="button"
-            class="btn btn-primary my-blue full-opacity"
-          >
-            <i class="fas fa-search"></i>
-          </button>
+  <div id="myModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Title:</h5>
+          <button type="button" class="btn-close" aria-label="Close"></button>
         </div>
-      </section>
-    </div>
-
-    <!-- Display modal for error messages -->
-
-    <div id="myModal" class="modal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Title:</h5>
-            <button type="button" class="btn-close" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p id="modalbodyval">Sample Text</p>
-          </div>
+        <div class="modal-body">
+          <p id="modalbodyval">Sample Text</p>
         </div>
       </div>
     </div>
-
-
-   
-    
-    
-    
-    <div class="clear-footer"></div>
-
-
-<!-- Footer section -->
-<footer class="text-center text-lg-start fixed-bottom golden">
-  <!-- Copyright -->
-  <div class="text-center p-3 text-white" style="background-color: #501050">
-    Data Source:
-    <a class="text-white" href="#">Rapid API</a>
-    <div class="text-center text-white">Made by Team Bootcamp</div>
   </div>
-  <!-- Copyright -->
-    
-</footer>
 
 
+  <div class="clear-footer"></div>
 
 
+  <!-- Footer section -->
+  <footer class="text-center text-lg-start fixed-bottom golden">
+    <!-- Copyright -->
+    <div class="text-center p-3 text-white" style="background-color: #501050">
+      Data Source:
+      <a class="text-white" href="#">Rapid API</a>
+      <div class="text-center text-white">Made by Team Bootcamp</div>
+    </div>
+    <!-- Copyright -->
 
-    </footer>
+  </footer>
 
-    <script src="./assets/scripts/oxford API.js"></script>
-  </body>
+
+  <script src="./assets/scripts/oxford API.js"></script>
+</body>
+
 </html>
