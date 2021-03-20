@@ -13,12 +13,12 @@ var favBtn = document.getElementById("add-favs");
 var favSearchEl = document.getElementById("fav-search");
 var tabNavSecEl = document.getElementById("display-answer");
 var myKi = "a9948976b7msh01160229121d1b6p1fd4d3jsnf2012c72efd4";
-tabNavSecEl.setAttribute('class', 'hide');
+tabNavSecEl.classList.add('hide');
 // Function to get search word
 searchButton.addEventListener('click', () => {
   var searchWord = searchInputEl.value.trim().toLowerCase();
   if (searchWord) {
-    tabNavSecEl.removeAttribute('class', 'hide');
+    tabNavSecEl.classList.remove('hide');
     fetchDefinitionAPI(searchWord);
     fetchReferenceAPI(searchWord);
     fetchExampleAPI(searchWord)
@@ -215,7 +215,7 @@ favWordDisplay();
 favSearchEl.addEventListener("click", function (event) {
     if (event.target.classList == "btn btn-primary ripple-surface fav") {
         var searchWord = event.target.innerText.toLowerCase();
-        tabNavSecEl.removeAttribute('class', 'hide');
+        tabNavSecEl.classList.remove('hide');
         fetchDefinitionAPI(searchWord);
         fetchReferenceAPI(searchWord);
         fetchExampleAPI(searchWord);     
