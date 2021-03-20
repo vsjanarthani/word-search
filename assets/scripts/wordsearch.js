@@ -1,4 +1,4 @@
-// Initialise DOM elements
+// Initialize DOM elements
 var searchInputEl = document.getElementById("search-input");
 var searchButtonEl = document.getElementById("search-button");
 var searchButton = document.getElementById("search-button");
@@ -220,3 +220,10 @@ favSearchEl.addEventListener("click", function (event) {
 }
 });
   
+
+
+
+
+
+
+

@@ -53,22 +53,6 @@
   border: none;
 }
 
-.gold {
-  color: rgb(245, 217, 94);
-  font-weight: bolder;
-  font-size: 34px;
-  margin-left: 10px;
-  text-shadow: white;
-}
-
-.goldie {
-  color: #f5c418;
-}
-
-.golden {
-  background-color: #d6cdd3;
-}
-
 .highlighted span {
   font-weight: bolder;
 }
@@ -76,25 +60,6 @@
 .fav {
   margin: 15px;
   max-width: 200px;
-}
-
-/* Modal section */
-
-.modal {
-  width: 100%;
-  height: 40%; 
-  z-index: 10;
-}
-
-.modal-dialog {
-  min-width: 80%;
-  min-height: 40%;
-  margin-top: -50%;
-}
-
-.modal-body {
-  font-size: medium;
-  font-weight: bold;
 }
 
 .main, .display, .display-score, .display-storage {
@@ -195,13 +160,3 @@
    
  }
 }
-
-
-
-
- 
-
-
-
-
- 

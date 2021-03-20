@@ -29,7 +29,7 @@ h3 {
 
 p {
     text-align: center;
-    font-size: small;
+    font-size: large;
 }
 
 /* Header Section */
@@ -150,6 +150,7 @@ span {
 .question {
     line-height: 20px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .question h2 {
@@ -307,7 +308,7 @@ span {
     }
 
     .container {
-        margin: 20px;
+        margin: 0 auto;
     }
 
     .user-answer h2,
@@ -358,13 +359,14 @@ span {
     
     h3,
     p {
-        font-size: 1.5rem;
+        font-size: 20px;
     }
 
     .title a,
     .time,
     #timervalue {
-        font-size: 1.2rem;
+        font-size: 16px;
+    font-weight: 400;
     }
 
     .start,
@@ -381,6 +383,9 @@ span {
     .questions {
         justify-content: flex-start ;
         align-items: center;
+        margin-top:150px;
+        display: inline-flex;
+        margin: 160px auto;
     }
     .questions h2 {
         font-size: 1.5rem;
