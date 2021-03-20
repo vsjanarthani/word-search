@@ -53,22 +53,6 @@
   border: none;
 }
 
-.gold {
-  color: rgb(245, 217, 94);
-  font-weight: bolder;
-  font-size: 34px;
-  margin-left: 10px;
-  text-shadow: white;
-}
-
-.goldie {
-  color: #f5c418;
-}
-
-.golden {
-  background-color: #d6cdd3;
-}
-
 .highlighted span {
   font-weight: bolder;
 }
@@ -78,38 +62,7 @@
   max-width: 200px;
 }
 
-/* Modal section */
-
-.modal {
-  width: 100%;
-  height: 40%; 
-  z-index: 10;
-}
-
-.modal-dialog {
-  min-width: 80%;
-  min-height: 40%;
-  margin-top: -50%;
-}
-
-.modal-body {
-  font-size: medium;
-  font-weight: bold;
-}
-
 .main, .display, .display-score, .display-storage {
-  display: none;
-}
-
-.active {
-  display: flex;   
-}
-
-.show {
-  display: flex;
-}
-
-.hide {
   display: none;
 }
 
@@ -120,6 +73,18 @@
 
 .question h4 {
   margin: 35px auto 35px auto;
+}
+
+.active {
+  display: flex;   
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 @media screen and (min-width: 575px) {
@@ -149,6 +114,17 @@
 
 .main-text-reference {
   justify-self: center;
+}
+.active {
+  display: flex;   
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 }
@@ -194,14 +170,15 @@
    justify-self: center;
    
  }
+ .active {
+  display: flex;   
 }
 
+.show {
+  display: block;
+}
 
-
-
- 
-
-
-
-
- 
+.hide {
+  display: none;
+}
+}

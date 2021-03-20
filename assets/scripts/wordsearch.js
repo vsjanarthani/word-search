@@ -1,4 +1,4 @@
-// Initialise DOM elements
+// Initialize DOM elements
 var searchInputEl = document.getElementById("search-input");
 var searchButtonEl = document.getElementById("search-button");
 var searchButton = document.getElementById("search-button");
@@ -11,12 +11,14 @@ var wordEl = document.getElementById("word");
 var phoneticsEl = document.getElementById("phonetics");
 var favBtn = document.getElementById("add-favs");
 var favSearchEl = document.getElementById("fav-search");
+var tabNavSecEl = document.getElementById("display-answer");
 var myKi = "a9948976b7msh01160229121d1b6p1fd4d3jsnf2012c72efd4";
-
+tabNavSecEl.setAttribute('class', 'hide');
 // Function to get search word
 searchButton.addEventListener('click', () => {
   var searchWord = searchInputEl.value.trim().toLowerCase();
   if (searchWord) {
+    tabNavSecEl.removeAttribute('class', 'hide');
     fetchDefinitionAPI(searchWord);
     fetchReferenceAPI(searchWord);
     fetchExampleAPI(searchWord)
@@ -54,7 +56,7 @@ function fetchDefinitionAPI(searchWord) {
 
 // Function to display search results
 function displayDefinition(searchResult) {
-  console.log(searchResult);
+  // console.log(searchResult);
   searchedWordEl.innerText = searchResult.response.toUpperCase();
   let defintion = searchResult.meaning;
   var defVal = "";
@@ -168,7 +170,7 @@ function displayExample(searchResult) {
 
 favBtn.addEventListener('click', () => {
   var favWord = searchedWordEl.innerText;
-  console.log(favWord);
+  // console.log(favWord);
 // store the search result in local storage
 if (localStorage.getItem('saved-word') == null) {
   savedWord = [];
@@ -213,10 +215,21 @@ favWordDisplay();
 favSearchEl.addEventListener("click", function (event) {
     if (event.target.classList == "btn btn-primary ripple-surface fav") {
         var searchWord = event.target.innerText.toLowerCase();
-        console.log(searchWord);
+        tabNavSecEl.removeAttribute('class', 'hide');
         fetchDefinitionAPI(searchWord);
         fetchReferenceAPI(searchWord);
-        fetchExampleAPI(searchWord);
+        fetchExampleAPI(searchWord);     
 }
 });
   
+// Function to clear storage
+function clearData() {
+  localStorage.removeItem('saved-word');
+  document.location.reload();
+}
+
+
+
+
+
+
