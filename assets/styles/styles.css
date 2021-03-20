@@ -66,18 +66,6 @@
   display: none;
 }
 
-.active {
-  display: flex;   
-}
-
-.show {
-  display: flex;
-}
-
-.hide {
-  display: none;
-}
-
 .card {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -85,6 +73,18 @@
 
 .question h4 {
   margin: 35px auto 35px auto;
+}
+
+.active {
+  display: flex;   
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 @media screen and (min-width: 575px) {
@@ -114,6 +114,17 @@
 
 .main-text-reference {
   justify-self: center;
+}
+.active {
+  display: flex;   
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 }
@@ -159,4 +170,15 @@
    justify-self: center;
    
  }
+ .active {
+  display: flex;   
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
 }
