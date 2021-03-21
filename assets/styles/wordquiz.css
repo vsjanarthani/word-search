@@ -45,6 +45,10 @@ p {
     padding-right: 20px;
 }
     
+.goog-logo-link{
+    display: none;
+  }
+
 .title a,
 .time,
 #timervalue {

@@ -51,6 +51,17 @@
     </div>
   </nav>
 
+<!--google translate-->
+  <div id="google_translate_element" class="text-center mt-5 mb-5"></div>
+
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+  </script>
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <!-- Search Section -->
   <div class="subheader">
     <section class="searchbox container-fluid">
@@ -169,7 +180,7 @@
     <!-- Copyright started here !-->
     <div class="text-center p-3 text-white" style="background-color: #501050">
       Data Source:
-      <a class="text-white" href="#">Rapid API</a>
+      <a class="text-white" href="#">Rapid API & Google</a>
 
     </div>
 
