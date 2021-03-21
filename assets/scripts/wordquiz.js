@@ -19,23 +19,23 @@ var myModalTitle = document.querySelector(".modal-title");
 var myModalBody = document.getElementById("modalbodyval");
 var closeModalEl = document.querySelector(".btn-close");
 myModal.classList.add("hide");
-const myrapidki = "insert key";
+const myrapidki = "a9948976b7msh01160229121d1b6p1fd4d3jsnf2012c72efd4";
 const myhost = "twinword-word-association-quiz.p.rapidapi.com";
 var currentIndex = 0;
 var score = 0;
 
 // Start Quiz function
 startQuizEl.addEventListener("click", function () {
-  // fetch("https://twinword-word-association-quiz.p.rapidapi.com/type1/?level=7&area=overall", {
-  // "method": "GET",
-  // "headers": {
-  //     "x-rapidapi-key": myrapidki,
-  //     "x-rapidapi-host": myhost
-  // }
-  // })
+  fetch("https://twinword-word-association-quiz.p.rapidapi.com/type1/?level=7&area=overall", {
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-key": myrapidki,
+      "x-rapidapi-host": myhost
+    }
+  })
 
-  // Fetching the sample file - works only with live server
-  fetch("./assets/scripts/response-twinwordquiz.json")
+    // Fetching the sample file - works only with live server
+    // fetch("./assets/scripts/response-twinwordquiz.json")
     .then((res) => {
       if (res.status != 200) {
         throw Error(res.status + " " + res.statusText);
@@ -196,6 +196,6 @@ function displayHighScore() {
 
 // Function to clear storage
 function clearData() {
-  localStorage.clear();
+  localStorage.removeItem("highScores");
   paraEl.innerText = "Storage Cleared. Nothing to display at the moment.";
 }

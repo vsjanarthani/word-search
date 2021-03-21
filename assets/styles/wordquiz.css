@@ -274,7 +274,8 @@ span {
   display: flex;
 }
 
-#go-back {
+#go-back,
+#go-home {
   text-decoration: none;
   color: whitesmoke;
 }
