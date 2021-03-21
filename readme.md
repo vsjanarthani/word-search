@@ -48,7 +48,7 @@ Please find the project repository here - [(https://github.com/vsjanarthani/word
 
 * Janarthani Subbramaniam
 * Shirin Shahram
-* Maria Donaji Velazquez
+* Donaji Velazquez
 * Andrea Salazar
 * Muhammad Tariq
 
