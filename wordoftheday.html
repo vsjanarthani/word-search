@@ -1,146 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Word Search</title>
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
-      rel="stylesheet"
-    />
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Search</title>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      rel="stylesheet"
-    />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 
-    <!-- Google Fonts -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-    </style>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
 
-    <!-- My stylesheet -->
-    <link rel="stylesheet" href="./assets/styles/styles.css" />
-  </head>
+  <!-- Google Fonts -->
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+  </style>
 
-  <body>
-    <!-- Header section -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <a
-          class="navbar-brand gold"
-          type="button"
-          id="home"
-          href="./index.html"
-          style="color: white"
-          >Word
-          <span class="goldie">Search</span>
-          <i class="fas fa-search gold p-0 m-0"></i>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fas fa-bars text-light"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item translucid">
-              <a class="nav-link text-light" href="./wordoftheday.html"
-                >Word of the Day</a
-              >
-            </li>
-            <li class="nav-item translucid">
-              <a class="nav-link text-light" href="./wordquiz.html"
-                >Word Quiz</a
-              >
-            </li>
-            <li class="nav-item translucid">
-              <a class="nav-link text-light" href="./translation.html"
-                >Translation</a
-              >
-            </li>
-          </ul>
-        </div>
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="./assets/styles/styles.css" />
+</head>
+
+<body>
+  <!-- Header section -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand gold" type="button" id="home" href="./index.html" style="color: white">Word
+        <span class="goldie">Search</span>
+        <i class="fas fa-search gold p-0 m-0"></i>
+      </a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-light"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item translucid">
+            <a class="nav-link text-light" href="./wordoftheday.html">Word of the Day</a>
+          </li>
+          <li class="nav-item translucid">
+            <a class="nav-link text-light" href="./wordquiz.html">Word Quiz</a>
+          </li>
+        </ul>
+
+        <!--google translate-->
+        <div id="google_translate_element" class="text-center mt-5 mb-5"></div>
+
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              { pageLanguage: "en" },
+              "google_translate_element"
+            );
+          }
+        </script>
+
+        <script type="text/javascript"
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!--google translate-->
-    <div id="google_translate_element" class="text-center mt-5 mb-5"></div>
+  <!-- Display section -->
+  <section class="container py-5 mt-5 d-flex flex-column justify-content-center align-items-center"
+    style="border-radius: 10px">
+    <div class="row">
+      <h1>Word of the Day</h1>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <h3 id="word-of-the-day" class="mb-3"></h3>
+        <h6 id="pronunciation" class="mb-3"></h6>
+        <h4 id="definition" class="mb-3"></h4>
+      </div>
+    </div>
+  </section>
 
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          { pageLanguage: "en" },
-          "google_translate_element"
-        );
-      }
-    </script>
+  <div class="clear-footer"></div>
 
-    <script
-      type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
-
-    <!-- Display section -->
-    <section
-      class="container py-5 mt-5 d-flex flex-column justify-content-center align-items-center"
-      style="background: #e3f5fb; border-radius: 10px"
-    >
+  <!-- Footer section -->
+  <footer class="text-center text-lg-start fixed-bottom text-light">
+    <div class="container mt-4 mb-2">
       <div class="row">
-        <h1>Word of the Day</h1>
-        <div
-          class="d-flex flex-column justify-content-center align-items-center"
-        >
-          <h3 id="word-of-the-day" class="mb-3"></h3>
-          <h6 id="pronunciation" class="mb-3"></h6>
-          <h4 id="definition" class="mb-3"></h4>
-        </div>
+        <div class="col-md">Team Members:</div>
+
+        <div class="col-md">Andrea Salazar</div>
+
+        <div class="col-md">Shirin Shahram</div>
+
+        <div class="col-md">Janarthani Subbramaniam</div>
+
+        <div class="col-md">Muhammad Tariq</div>
+
+        <div class="col-md">Donaji Velazquez</div>
       </div>
-    </section>
+    </div>
 
-    <div class="clear-footer"></div>
+    <!-- Copyright started here !-->
+    <div class="text-center p-3 text-light">
+      Data Source:
+      <a class="text-white" href="#">Rapid API & Google</a>
+    </div>
 
-    <!-- Footer section -->
-    <footer class="text-center text-lg-start fixed-bottom text-light">
-      <div class="container mt-4 mb-2">
-        <div class="row">
-          <div class="col-md">Team Members:</div>
+    <!-- Copyright ended!-->
+  </footer>
 
-          <div class="col-md">Andrea Salazar</div>
+  <script src="./assets/scripts/wordoftheday.js"></script>
+</body>
 
-          <div class="col-md">Shirin Shahram</div>
-
-          <div class="col-md">Janarthani Subbramaniam</div>
-
-          <div class="col-md">Muhammad Tariq</div>
-
-          <div class="col-md">Donaji Velazquez</div>
-        </div>
-      </div>
-
-      <!-- Copyright started here !-->
-      <div class="text-center p-3 text-light">
-        Data Source:
-        <a class="text-white" href="#">Rapid API & Google</a>
-      </div>
-
-      <!-- Copyright ended!-->
-    </footer>
-
-    <script src="./assets/scripts/wordoftheday.js"></script>
-  </body>
 </html>
