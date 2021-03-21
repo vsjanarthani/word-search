@@ -1,4 +1,7 @@
 // Initialize DOM elements
+
+var fav = document.getElementById("add-favs");
+
 var searchInputEl = document.getElementById("search-input");
 var searchButtonEl = document.getElementById("search-button");
 var searchButton = document.getElementById("search-button");
@@ -230,6 +233,8 @@ function clearData() {
 
 
 
+// added EventListener for Fav button to change background color on click
+fav.addEventListener('click', () => fav.style.backgroundColor= 'rgba(238,174,202,1)') 
 
 
 
