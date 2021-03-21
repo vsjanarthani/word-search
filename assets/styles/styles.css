@@ -6,7 +6,8 @@
 .navbar {
   background-color: #501050;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  color: antiquewhite;
+  color: white;
+  width: 100%;
 }
 
 .subheader {
@@ -17,7 +18,11 @@
   justify-content: center;
 }
 
-.fav-words{
+.goog-logo-link{
+  display: none;
+}
+
+.fav-words {
   display: flex;
 }
 
@@ -45,7 +50,7 @@
   opacity: 100%;
 }
 .clear-footer {
-  height: 90px;
+  height: 200px;
   background-color: transparent;
 }
 .translucid {
@@ -58,11 +63,18 @@
 }
 
 .fav {
-  margin: 15px;
-  max-width: 200px;
+  margin: 6px;
 }
 
-.main, .display, .display-score, .display-storage {
+#fav-search button {
+  background-color: #ccc !important;
+  color: black;
+}
+
+.main,
+.display,
+.display-score,
+.display-storage {
   display: none;
 }
 
@@ -76,7 +88,7 @@
 }
 
 .active {
-  display: flex;   
+  display: flex;
 }
 
 .show {
@@ -85,54 +97,78 @@
 
 .hide {
   display: none;
+}
+
+.goldie {
+  color: #f5c418;
+}
+
+.gold {
+  color: rgb(248, 222, 74);
+}
+
+.navbar-brand {
+  font-weight: bolder;
+  color: white !important;
+}
+
+footer {
+  background-color: #501050;
+  font-weight: lighter;
+  font-size: smaller;
+  position: sticky;
 }
 
 @media screen and (min-width: 575px) {
+  .card {
+    width: 75%;
+    margin: 40px auto 40px auto;
+  }
 
-.card {
-  width:75%;
-  margin: 40px auto 40px auto;
-}
+  .question h4 {
+    margin: 40px auto 40px auto;
+  }
 
-.question h4 {
-  margin: 40px auto 40px auto;
-}
+  .subheader {
+    margin: 45px auto 45px auto;
+    width: 50%;
+    justify-self: center;
+  }
 
-.subheader {
-   margin: 45px auto 45px auto;
-   width: 50%;
-   justify-self: center;
-   
-}
+  .main-divided {
+    display: inline;
+  }
 
-.tab-pane {
-  width: 60%;
-  margin: 20px auto 20px auto;
-  justify-self: center;
-  justify-content: center;
-}
+  .word-fetched {
+    float: right;
+  }
 
-.main-text-reference {
-  justify-self: center;
-}
-.active {
-  display: flex;   
-}
+  .tab-pane {
+    width: 60%;
+    margin: 20px auto 20px auto;
+    justify-self: center;
+    justify-content: center;
+  }
 
-.show {
-  display: block;
-}
+  .main-text-reference {
+    justify-self: center;
+  }
+  .active {
+    display: flex;
+  }
 
-.hide {
-  display: none;
-}
+  .show {
+    display: block;
+  }
 
+  .hide {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 980px) {
-
   .card {
-    width:65%;
+    width: 65%;
     margin: 80px auto 80px auto;
   }
 
@@ -143,7 +179,7 @@
     font-size: 48px;
   }
 
-  .card-body p{
+  .card-body p {
     font-size: 20px;
     margin-bottom: 35px;
     text-align: center;
@@ -156,29 +192,28 @@
   .subheader {
     margin: 65px auto 65px auto;
     width: 30%;
-    justify-self: center; 
+    justify-self: center;
     border-radius: 15px;
- }
+  }
 
- .tab-pane {
-  width: 40%;
-  margin: 35px auto 35px auto;
-  justify-self: center;
-  justify-content: center;
-}
- .main-text-reference {
-   justify-self: center;
-   
- }
- .active {
-  display: flex;   
-}
+  .tab-pane {
+    width: 40%;
+    margin: 35px auto 35px auto;
+    justify-self: center;
+    justify-content: center;
+  }
+  .main-text-reference {
+    justify-self: center;
+  }
+  .active {
+    display: flex;
+  }
 
-.show {
-  display: block;
-}
+  .show {
+    display: block;
+  }
 
-.hide {
-  display: none;
-}
+  .hide {
+    display: none;
+  }
 }
