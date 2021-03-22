@@ -32,7 +32,7 @@ Please find the project repository here - [(https://github.com/vsjanarthani/word
 ## Screenshot of the Deployed Webpage
 * Word Search (Main Page)
 
-![code](./assets/images/word-search-main.jpg)
+![code](./assets/images/word-search.jpg)
 
 * Word Quiz
 
