@@ -13,7 +13,7 @@ As a student, I want to search and learn different words, so that I can  be bett
 3. When I click on ♡ symbol next to the searched word, then the word should be saved and be shown under favorite section.
 3. When I click on the "Word of the Day" tab, then I am presented with a random word for that day.
 4. When I click on the "Word Quiz" tab, then I will be redirected to another page to take a fun word quiz.
-5. When I click on translation tab, then I should be able to select the language and the whole page will be translated in the selected language.
+5. When I click on translation drop down menu, then I should be able to select the language and the whole page will be translated in the selected language.
 
 ## Live URL
 
@@ -38,9 +38,9 @@ Please find the project repository here - [(https://github.com/vsjanarthani/word
 
 ![code](./assets/images/word-quiz.jpg)
 
-* Translation
+* Word of the Day
 
-![code](./assets/images/translation.jpg)
+![code](./assets/images/WordOfDay.jpg)
 
 
 
