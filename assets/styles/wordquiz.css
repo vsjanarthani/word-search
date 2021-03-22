@@ -8,12 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.navibar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
 
 /* Mobile First design */
 
@@ -43,21 +37,22 @@ p {
 
 .header {
   width: 100%;
+  height: fit-content;
+  max-height: 140px;
   background-color: #501050;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
 
 .navbar {
-  display: inline;
-  margin: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 15px 10px 15px;
 }
 
-.goog-logo-link {
-  display: none;
-}
-
-.alingment {
+.alignment {
   align-self: center;
 }
 
@@ -144,7 +139,7 @@ span {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 80px;
+  top: 140px;
   display: none;
   flex-direction: column;
   align-content: center;
@@ -320,8 +315,14 @@ span {
 /* For tablets */
 
 @media screen and (min-width: 600px) {
+
   h1 {
     font-size: 2rem;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   .container {
