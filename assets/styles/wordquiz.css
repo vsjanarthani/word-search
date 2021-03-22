@@ -13,6 +13,7 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  background-color: #501050;
 }
 
 /* Mobile First design */
@@ -49,7 +50,7 @@ p {
 }
 
 .navbar {
-  display: inline;
+  display: flex;
   margin: 12px;
 }
 

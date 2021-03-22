@@ -32,26 +32,44 @@
   </head>
 
   <body>
-    <!-- Header Section -->
-    <header id="head" class="header">
-      <div class="row navibar">
-        <div class="title">
-          <a href="./index.html">Home</a>
-        </div>
-        <div class="title">
-          <a href="#highscores" onclick="displayHighScore();">High scores</a>
-        </div>
-        <div class="timer title">
-          <h4 class="time">Time:</h4>
-          <h4 id="timervalue" class="time">0</h4>
-        </div>
-      </div>
-      <!--google translate-->
 
-      <div
-        id="google_translate_element"
-        class="row text-center alinement"
-      ></div>
+
+<!-- Header section -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #501050">
+  <div class="container-fluid">
+    <a class="navbar-brand gold" type="button" id="home" href="./index.html" style="color: white">Word
+      <span class="goldie">Search</span>
+      <i class="fas fa-search gold p-0 m-0"></i>
+    </a>
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text-light"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item translucid">
+          <div class="title">
+            <a href="./index.html">Home</a>
+          </div>
+        </li>
+        <li class="nav-item translucid">
+          <div class="title">
+            <a href="#highscores" onclick="displayHighScore();">High scores</a>
+          </div>
+        </li>
+        
+        <li class="nav-item translucid">
+          <div class="timer title">
+            <h4 class="time">Time:</h4>
+            <h4 id="timervalue" class="time">0</h4>
+          </div>
+        </li>
+
+
+      </ul>
+
+      <!--google translate-->
+      <div id="google_translate_element" class="text-center mt-5 mb-5"></div>
 
       <script type="text/javascript">
         function googleTranslateElementInit() {
@@ -62,11 +80,12 @@
         }
       </script>
 
-      <script
-        type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-      ></script>
-    </header>
+      <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </div>
+  </div>
+</nav>
+ 
 
     <!-- Start Quiz Section -->
     <section id="start" class="main">
