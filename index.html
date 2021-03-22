@@ -1,241 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Word Search</title>
-    <!-- MDB -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
-      rel="stylesheet"
-    />
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Search</title>
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      rel="stylesheet"
-    />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 
-    <!-- Google Fonts -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-    </style>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
 
-    <!-- My stylesheet -->
-    <link rel="stylesheet" href="./assets/styles/styles.css" />
-  </head>
+  <!-- Google Fonts -->
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+  </style>
 
-  <body>
-    <!-- Header section -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <a
-          class="navbar-brand gold"
-          type="button"
-          id="home"
-          href="./index.html"
-          style="color: white"
-          >Word
-          <span class="goldie">Search</span>
-          <i class="fas fa-search gold p-0 m-0"></i>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fas fa-bars text-light"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item translucid">
-              <a class="nav-link text-light" href="./wordoftheday.html"
-                >Word of the Day</a
-              >
-            </li>
-            <li class="nav-item translucid">
-              <a class="nav-link text-light" href="./wordquiz.html"
-                >Word Quiz</a
-              >
-            </li>
-          </ul>
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="./assets/styles/styles.css" />
+</head>
 
-          <!--google translate-->
-          <div
-            id="google_translate_element"
-            class="text-center mt-5 mb-5"
-          ></div>
+<body>
+  <!-- Header section -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand gold" type="button" id="home" href="./index.html" style="color: white">Word
+        <span class="goldie">Search</span>
+        <i class="fas fa-search gold p-0 m-0"></i>
+      </a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-light"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item translucid">
+            <a class="nav-link text-light" href="./wordoftheday.html">Word of the Day</a>
+          </li>
+          <li class="nav-item translucid">
+            <a class="nav-link text-light" href="./wordquiz.html">Word Quiz</a>
+          </li>
+        </ul>
 
-          <script type="text/javascript">
-            function googleTranslateElementInit() {
-              new google.translate.TranslateElement(
-                { pageLanguage: "en" },
-                "google_translate_element"
-              );
-            }
-          </script>
+        <!--google translate-->
+        <div id="google_translate_element" class="text-center mt-5 mb-5"></div>
 
-          <script
-            type="text/javascript"
-            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-          ></script>
-        </div>
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+              { pageLanguage: "en" },
+              "google_translate_element"
+            );
+          }
+        </script>
+
+        <script type="text/javascript"
+          src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div class="subheader">
-      <section class="searchbox container-fluid">
-        <div class="input-group rounded">
-          <input
-            type="search"
-            class="form-control rounded full-opacity"
-            placeholder="Search"
-            aria-label="Search"
-            aria-describedby="search-addon"
-            id="search-input"
-          />
+  <div class="subheader">
+    <section class="searchbox container-fluid">
+      <div class="input-group rounded">
+        <input type="search" class="form-control rounded full-opacity" placeholder="Search" aria-label="Search"
+          aria-describedby="search-addon" id="search-input" />
 
-          <button
-            id="search-button"
-            type="button"
-            class="btn btn-primary my-blue full-opacity"
-          >
-            <i class="fas fa-search"></i>
+        <button id="search-button" type="button" class="btn btn-primary my-blue full-opacity">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!--Main layout-->
+  <main class="my-5">
+    <div class="container border-radius" style="min-height: 100vh">
+      <!--Section: Content-->
+      <section class="text-center main-divided">
+        <div id="display-answer" class="col-md-10 mb-4 word-fetched">
+          <div class="p-3 text-center">
+            <div class="d-flex justify-content-center align-items-center">
+              <h1 id="searched-word" class="mb-3"></h1>
+              <button id="add-favs" type="button" class="translucid m-2">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <h6 class="mb-3">phonetics:<span id="phonetics"></span></h6>
+            <ul class="nav nav-tabs mb-3 d-flex justify-content-center" id="ex1" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="ex1-tab-1" data-mdb-toggle="tab" href="#ex1-tabs-1" role="tab"
+                  aria-controls="ex1-tabs-1" aria-selected="true">Definition</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="ex1-tab-2" data-mdb-toggle="tab" href="#ex1-tabs-2" role="tab"
+                  aria-controls="ex1-tabs-2" aria-selected="false">Reference</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="ex1-tab-3" data-mdb-toggle="tab" href="#ex1-tabs-3" role="tab"
+                  aria-controls="ex1-tabs-3" aria-selected="false">Examples</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Tabs navs -->
+          <!-- Tabs content -->
+          <div class="tab-content" id="ex1-content">
+            <div class="tab-pane fade p-3 show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+              <p id="definition"></p>
+            </div>
+            <div class="tab-pane fade p-3 highlighted" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+              <p id="reference" class="main-text-reference"></p>
+            </div>
+            <div class="tab-pane fade p-3" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+              <p><span id="example"></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <h4 class="mb-3"><strong>Favorite Words</strong></h4>
+          <button type="button" id="clear" onclick="clearData();" class="btn btn-primary ripple-surface">
+            Clear All
           </button>
+          <div class="row">
+            <div class="col-md-3 mt-3">
+              <div class="col-md-3" id="fav-search" class="row"></div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
+  </main>
 
-    <!--Main layout-->
-    <main class="my-5">
-      <div class="container border-radius" style="min-height: 100vh">
-        <!--Section: Content-->
-        <section class="text-center main-divided">
-          <div id="display-answer" class="col-md-10 mb-4 word-fetched">
-            <div class="p-3 text-center">
-              <div class="d-flex justify-content-center align-items-center">
-                <h1 id="searched-word" class="mb-3"></h1>
-                <button id="add-favs" type="button" class="translucid m-2">
-                  <i class="far fa-heart"></i>
-                </button>
-              </div>
-              <h6 class="mb-3">phonetics:<span id="phonetics"></span></h6>
-              <ul
-                class="nav nav-tabs mb-3 d-flex justify-content-center"
-                id="ex1"
-                role="tablist"
-              >
-                <li class="nav-item" role="presentation">
-                  <a
-                    class="nav-link active"
-                    id="ex1-tab-1"
-                    data-mdb-toggle="tab"
-                    href="#ex1-tabs-1"
-                    role="tab"
-                    aria-controls="ex1-tabs-1"
-                    aria-selected="true"
-                    >Definition</a
-                  >
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a
-                    class="nav-link"
-                    id="ex1-tab-2"
-                    data-mdb-toggle="tab"
-                    href="#ex1-tabs-2"
-                    role="tab"
-                    aria-controls="ex1-tabs-2"
-                    aria-selected="false"
-                    >Reference</a
-                  >
-                </li>
-                <li class="nav-item" role="presentation">
-                  <a
-                    class="nav-link"
-                    id="ex1-tab-3"
-                    data-mdb-toggle="tab"
-                    href="#ex1-tabs-3"
-                    role="tab"
-                    aria-controls="ex1-tabs-3"
-                    aria-selected="false"
-                    >Examples</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <!-- Tabs navs -->
-            <!-- Tabs content -->
-            <div class="tab-content" id="ex1-content">
-              <div
-                class="tab-pane fade p-3 show active"
-                id="ex1-tabs-1"
-                role="tabpanel"
-                aria-labelledby="ex1-tab-1"
-              >
-                <p id="definition"></p>
-              </div>
-              <div
-                class="tab-pane fade p-3 highlighted"
-                id="ex1-tabs-2"
-                role="tabpanel"
-                aria-labelledby="ex1-tab-2"
-              >
-                <p id="reference" class="main-text-reference"></p>
-              </div>
-              <div
-                class="tab-pane fade p-3"
-                id="ex1-tabs-3"
-                role="tabpanel"
-                aria-labelledby="ex1-tab-3"
-              >
-                <p><span id="example"></span></p>
-              </div>
-            </div>
-          </div>
-          <div class="sidebar">
-            <h4 class="mb-3"><strong>Favorite Words</strong></h4>
-            <button
-              type="button"
-              id="clear"
-              onclick="clearData();"
-              class="btn btn-primary ripple-surface"
-            >
-              Clear All
-            </button>
-            <div class="row">
-              <div class="col-md-3 mt-3">
-                <div class="col-md-3" id="fav-search" class="row"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
+  <div class="clear-footer"></div>
 
-    <div class="clear-footer"></div>
+  <!-- Footer section -->
+  <footer class="text-center text-lg-start fixed-bottom text-light">
+    <div class="text-center p-3 text-light">
+      Team Members: Andrea Salazar, Shirin Shahram, Janarthani Subbramaniam,
+      Muhammad Tariq, Donaji Velazquez
+    </div>
+    <div class="text-center p-3 text-light">
+      Data Source:
+      <a class="text-white" href="#">Rapid API & Google Translate</a>
+    </div>
+  </footer>
 
-    <!-- Footer section -->
-    <footer class="text-center text-lg-start fixed-bottom text-light">
-      <div class="text-center p-3 text-light">
-        Team Members: Andrea Salazar, Shirin Shahram, Janarthani Subbramaniam,
-        Muhammad Tariq, Donaji Velazquez
-      </div>
-      <div class="text-center p-3 text-light">
-        Data Source:
-        <a class="text-white" href="#">Rapid API & Google</a>
-      </div>
-    </footer>
+  <script src="./assets/scripts/wordsearch.js"></script>
+</body>
 
-    <script src="./assets/scripts/wordsearch.js"></script>
-  </body>
 </html>

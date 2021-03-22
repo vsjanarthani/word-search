@@ -42,6 +42,7 @@ p {
   background-color: #501050;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding-right: 20px;
+  z-index: 25;
 }
     
 .goog-logo-link{
@@ -93,7 +94,7 @@ p {
 }
 
 .box p {
-  text-align: justify;
+  text-align: center;
 }
 
 span {

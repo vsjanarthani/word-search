@@ -8,7 +8,6 @@ var randomWordSaved = localStorage.getItem("rdmWord");
 var savedDate = localStorage.getItem("date");
 var todaydate = new Date();
 var mydate = todaydate.getFullYear() + '-' + (todaydate.getMonth() + 1) + '-' + todaydate.getDate();
-console.log(mydate);
 
 if (!randomWordSaved || savedDate != mydate) {
   getRandomWord();
@@ -52,9 +51,9 @@ function getRandomWord() {
 // function to display word of the day
 function displayWord(data) {
   // console.log(data); 
-  wordOfTheDayEl.innerText = data[0].word;
-  pronunciationEl.innerText = data[0].pronunciation;
-  definitionEl.innerText = data[0].definition;
+  wordOfTheDayEl.innerText = `Word: ${data[0].word}`;
+  pronunciationEl.innerText = `Pronunciation: ${data[0].pronunciation}`;
+  definitionEl.innerText = `Definition: ${data[0].definition}`;
   localStorage.setItem('data', JSON.stringify(data));
   localStorage.setItem("rdmWord", wordOfTheDayEl.innerText);
   localStorage.setItem('date', mydate);
