@@ -83,6 +83,12 @@
   margin: 35px auto 35px auto;
 }
 
+#definition,
+#pronunciation,
+#word-of-the-day {
+  text-align: center;
+}
+
 .active {
   display: flex;
 }
@@ -198,9 +204,11 @@ footer {
     justify-self: center;
     justify-content: center;
   }
+
   .main-text-reference {
     justify-self: center;
   }
+
   .active {
     display: flex;
   }
